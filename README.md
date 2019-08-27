@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.5.5
 
 * System dependencies
 
@@ -21,4 +21,11 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+Для построения приложения TestGuru потребуются следующие сущности:  
+* Пользователи
+* Вопросы
+* Ответы
+* Тесты
+* Обработка
+* Результаты
+
