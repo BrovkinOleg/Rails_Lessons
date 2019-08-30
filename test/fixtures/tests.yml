@@ -2,10 +2,8 @@
 
 one:
   title: MyString
-  level: 1
-  categories_id: 1
+  level: 
 
 two:
   title: MyString
-  level: 1
-  categories_id: 1
+  level: 
