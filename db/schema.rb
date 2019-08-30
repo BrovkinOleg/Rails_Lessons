@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_30_150157) do
+ActiveRecord::Schema.define(version: 2019_08_30_151519) do
 
   create_table "answers", force: :cascade do |t|
     t.string "body"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 2019_08_30_150157) do
     t.string "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "tests_id"
+    t.index ["tests_id"], name: "index_questions_on_tests_id"
   end
 
   create_table "tests", force: :cascade do |t|
@@ -37,12 +39,19 @@ ActiveRecord::Schema.define(version: 2019_08_30_150157) do
     t.integer "level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "categories_id"
+    t.index ["categories_id"], name: "index_tests_on_categories_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "categories_id"
+    t.index ["categories_id"], name: "index_users_on_categories_id"
   end
 
+  add_foreign_key "questions", "tests", column: "tests_id"
+  add_foreign_key "tests", "categories", column: "categories_id"
+  add_foreign_key "users", "categories", column: "categories_id"
 end
