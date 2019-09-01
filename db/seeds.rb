@@ -43,9 +43,11 @@ Answer.create(body: 'answer_10', questions_id: Question.where("title = 'JAVA' AN
 Answer.create(body: 'answer_11', questions_id: Question.where("title = 'JAVA' AND level = 2"))
 Answer.create(body: 'answer_12', questions_id: Question.where("title = 'JAVA' AND level = 3"))
 
-User.create(name: 'Admin', categories_id: Category.where(title: 'Rails'))
-User.create(name: 'Sara', categories_id: Category.where(title: 'Rails'))
-User.create(name: 'Jack', categories_id: Category.where(title: 'HTML'))
-User.create(name: 'Bill', categories_id: Category.where(title: 'JAVA'))
-User.create(name: 'John', categories_id: Category.where(title: 'Rails'))
-User.create(name: 'John', categories_id: Category.where(title: 'Rails'))
+User.create(name: 'Admin')
+User.create(name: 'Sara')
+User.create(name: 'Jack')
+User.create(name: 'Bill')
+User.create(name: 'John')
+User.create(name: 'John')
+
+# Category.delete_all; Test.delete_all; User.delete_all; Question.delete_all; Answer.delete_all;
