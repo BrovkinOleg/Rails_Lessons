@@ -1,7 +1,51 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# frozen_string_literal: true
+
+Category.create(title: 'Rails')
+Category.create(title: 'HTML')
+Category.create(title: 'JAVA')
+
+Test.create(title: 'Rails', level: 0, categories_id: Category.where(title: 'Rails'))
+Test.create(title: 'Rails', level: 1, categories_id: Category.where(title: 'Rails'))
+Test.create(title: 'Rails', level: 2, categories_id: Category.where(title: 'Rails'))
+Test.create(title: 'Rails', level: 3, categories_id: Category.where(title: 'Rails'))
+Test.create(title: 'HTML', level: 0, categories_id: Category.where(title: 'HTML'))
+Test.create(title: 'HTML', level: 1, categories_id: Category.where(title: 'HTML'))
+Test.create(title: 'HTML', level: 2, categories_id: Category.where(title: 'HTML'))
+Test.create(title: 'HTML', level: 3, categories_id: Category.where(title: 'HTML'))
+Test.create(title: 'JAVA', level: 0, categories_id: Category.where(title: 'JAVA'))
+Test.create(title: 'JAVA', level: 1, categories_id: Category.where(title: 'JAVA'))
+Test.create(title: 'JAVA', level: 2, categories_id: Category.where(title: 'JAVA'))
+Test.create(title: 'JAVA', level: 3, categories_id: Category.where(title: 'JAVA'))
+
+Question.create(body: 'question_01', tests_id: Test.where("title = 'Rails' AND level = 0"))
+Question.create(body: 'question_02', tests_id: Test.where("title = 'Rails' AND level = 1"))
+Question.create(body: 'question_03', tests_id: Test.where("title = 'Rails' AND level = 2"))
+Question.create(body: 'question_04', tests_id: Test.where("title = 'Rails' AND level = 3"))
+Question.create(body: 'question_05', tests_id: Test.where("title = 'HTML' AND level = 0"))
+Question.create(body: 'question_06', tests_id: Test.where("title = 'HTML' AND level = 1"))
+Question.create(body: 'question_07', tests_id: Test.where("title = 'HTML' AND level = 2"))
+Question.create(body: 'question_08', tests_id: Test.where("title = 'HTML' AND level = 3"))
+Question.create(body: 'question_09', tests_id: Test.where("title = 'JAVA' AND level = 0"))
+Question.create(body: 'question_10', tests_id: Test.where("title = 'JAVA' AND level = 0"))
+Question.create(body: 'question_11', tests_id: Test.where("title = 'JAVA' AND level = 0"))
+Question.create(body: 'question_12', tests_id: Test.where("title = 'JAVA' AND level = 0"))
+
+Answer.create(body: 'answer_01', questions_id: Question.where("title = 'Rails' AND level = 0"))
+Answer.create(body: 'answer_02', questions_id: Question.where("title = 'Rails' AND level = 1"))
+Answer.create(body: 'answer_03', questions_id: Question.where("title = 'Rails' AND level = 2"))
+Answer.create(body: 'answer_04', questions_id: Question.where("title = 'Rails' AND level = 3"))
+Answer.create(body: 'answer_05', questions_id: Question.where("title = 'HTML' AND level = 0"))
+Answer.create(body: 'answer_06', questions_id: Question.where("title = 'HTML' AND level = 1"))
+Answer.create(body: 'answer_07', questions_id: Question.where("title = 'HTML' AND level = 2"))
+Answer.create(body: 'answer_08', questions_id: Question.where("title = 'HTML' AND level = 3"))
+Answer.create(body: 'answer_09', questions_id: Question.where("title = 'JAVA' AND level = 0"))
+Answer.create(body: 'answer_10', questions_id: Question.where("title = 'JAVA' AND level = 1"))
+Answer.create(body: 'answer_11', questions_id: Question.where("title = 'JAVA' AND level = 2"))
+Answer.create(body: 'answer_12', questions_id: Question.where("title = 'JAVA' AND level = 3"))
+
+User.create(name: 'Admin', categories_id: Category.where(title: 'Rails'))
+User.create(name: 'Sara', categories_id: Category.where(title: 'Rails'))
+User.create(name: 'Jack', categories_id: Category.where(title: 'HTML'))
+User.create(name: 'Bill', categories_id: Category.where(title: 'JAVA'))
+User.create(name: 'John', categories_id: Category.where(title: 'Rails'))
+User.create(name: 'John', categories_id: Category.where(title: 'Rails'))
