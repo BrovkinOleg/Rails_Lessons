@@ -7,7 +7,11 @@ class CreateUsers < ActiveRecord::Migration[6.0]
     end
   end
 
-  def tests_list(complexity_level, user_name)
+  def print_text
+    puts 'instance method just for test'
+  end
+
+  def tests_list_show(complexity_level, user_name)
     test_array = Test.where('level == ?', complexity_level)
     user_array = User.where('title == ?', user_name)
     test_titles = []

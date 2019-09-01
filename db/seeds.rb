@@ -63,5 +63,6 @@ User.create(name: 'John', tests_id: Test.find_by(title: 'HTML', level: 1).id)
 User.create(name: 'John', tests_id: Test.find_by(title: 'HTML', level: 2).id)
 
 # ========================= check =========================
+# CreateUsers.print_text
 # user = User.find(5)
 # puts user.class
