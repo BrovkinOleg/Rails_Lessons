@@ -61,3 +61,7 @@ User.create(name: 'John', tests_id: Test.find_by(title: 'Rails', level: 3).id)
 User.create(name: 'John', tests_id: Test.find_by(title: 'HTML', level: 0).id)
 User.create(name: 'John', tests_id: Test.find_by(title: 'HTML', level: 1).id)
 User.create(name: 'John', tests_id: Test.find_by(title: 'HTML', level: 2).id)
+
+# ========================= check =========================
+# user = User.find(5)
+# puts user.class
