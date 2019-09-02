@@ -48,12 +48,9 @@ ActiveRecord::Schema.define(version: 2019_08_31_090000) do
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "tests_id"
-    t.index ["tests_id"], name: "index_users_on_tests_id"
   end
 
   add_foreign_key "answers", "questions", column: "questions_id"
   add_foreign_key "questions", "tests", column: "tests_id"
   add_foreign_key "tests", "categories", column: "categories_id"
-  add_foreign_key "users", "tests", column: "tests_id"
 end

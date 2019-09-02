@@ -8,15 +8,13 @@ class CreateTests < ActiveRecord::Migration[6.0]
     end
   end
 
-  def self.print_text
-    puts 'self method just for test'
-  end
-
   def self.tests_array_show(category)
-    line = Category.find_by_title(title: category)
-    array = Test.where('? == ?', line.id, Test.categories_id)
+    line = Category.find_by(title: category)
+    puts 'Find tests for' + line.title
+    array = Test.where('categories_id == ?', line.id)
     array = array.order('id DESC')
     test_titles = []
-    array.each { |test| test_titles << test.title }
+    array.each { |test| test_titles << test.title + ' ' + test.level.to_s }
+    puts test_titles
   end
 end
