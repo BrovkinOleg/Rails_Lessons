@@ -7,21 +7,21 @@ Question.delete_all
 Test.delete_all
 Category.delete_all
 
-categories = Category.create!([{ title: 'Rails' }, { title: 'JAVA' }, { title: 'JAVA' }]).to_a
+categories = Category.create!([{ title: 'rails' }, { title: 'html' }, { title: 'java' }])
 
 tests = Test.create!([
-                       { title: 'Rails', level: 0, categories_id: categories[0].id },
-                       { title: 'Rails', level: 1, categories_id: categories[0].id },
-                       { title: 'Rails', level: 2, categories_id: categories[0].id },
-                       { title: 'Rails', level: 3, categories_id: categories[0].id },
-                       { title: 'HTML', level: 0, categories_id: categories[1].id },
-                       { title: 'HTML', level: 1, categories_id: categories[1].id },
-                       { title: 'HTML', level: 2, categories_id: categories[1].id },
-                       { title: 'HTML', level: 3, categories_id: categories[1].id },
-                       { title: 'JAVA', level: 0, categories_id: categories[2].id },
-                       { title: 'JAVA', level: 1, categories_id: categories[2].id },
-                       { title: 'JAVA', level: 2, categories_id: categories[2].id },
-                       { title: 'JAVA', level: 3, categories_id: categories[2].id }
+                       { title: 'Rails_novice', level: 0, categories_id: categories[0].id },
+                       { title: 'Rails_junior', level: 1, categories_id: categories[0].id },
+                       { title: 'Rails_middle', level: 2, categories_id: categories[0].id },
+                       { title: 'Rails_senior', level: 3, categories_id: categories[0].id },
+                       { title: 'HTML_novice', level: 0, categories_id: categories[1].id },
+                       { title: 'HTML_middle', level: 1, categories_id: categories[1].id },
+                       { title: 'HTML_middle', level: 2, categories_id: categories[1].id },
+                       { title: 'HTML_senior', level: 3, categories_id: categories[1].id },
+                       { title: 'JAVA_novice', level: 0, categories_id: categories[2].id },
+                       { title: 'JAVA_middle', level: 1, categories_id: categories[2].id },
+                       { title: 'JAVA_middle', level: 2, categories_id: categories[2].id },
+                       { title: 'JAVA_senior', level: 3, categories_id: categories[2].id }
                      ])
 
 questions = Question.create!([

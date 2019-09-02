@@ -1,6 +1,7 @@
 class Test < ApplicationRecord
 
   def self.tests_array_show(category)
-    Test.where('title == ?', category).order('id DESC')
+    sql = 'JOIN categories ON categories.id = tests.categories_id'
+    joins(sql).where('categories.title == ?', category).order('tests.id DESC').pluck(:title)
   end
 end
