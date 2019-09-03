@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 # You must delete tables in back order due to FOREIGN KEY
-User.delete_all
 Answer.delete_all
 Question.delete_all
 Test.delete_all
 Category.delete_all
+User.delete_all
 
 categories = Category.create!([{ title: 'rails' }, { title: 'html' }, { title: 'java' }])
 
