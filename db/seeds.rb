@@ -3,6 +3,7 @@
 # You must delete tables in back order due to FOREIGN KEY
 Answer.delete_all
 Question.delete_all
+UsersTest.delete_all
 Test.delete_all
 Category.delete_all
 User.delete_all
@@ -18,19 +19,33 @@ users = User.create!([
                      ])
 
 tests = Test.create!([
-                       { title: 'Rails_novice', level: 0, categories_id: categories[0].id, users_id: users[0].id },
-                       { title: 'Rails_junior', level: 1, categories_id: categories[0].id, users_id: users[1].id },
-                       { title: 'Rails_middle', level: 2, categories_id: categories[0].id, users_id: users[2].id },
-                       { title: 'Rails_senior', level: 3, categories_id: categories[0].id, users_id: users[3].id },
-                       { title: 'HTML_novice', level: 0, categories_id: categories[1].id, users_id: users[4].id },
-                       { title: 'HTML_middle', level: 1, categories_id: categories[1].id, users_id: users[3].id },
-                       { title: 'HTML_middle', level: 2, categories_id: categories[1].id, users_id: users[2].id },
-                       { title: 'HTML_senior', level: 3, categories_id: categories[1].id, users_id: users[1].id },
-                       { title: 'JAVA_novice', level: 0, categories_id: categories[2].id, users_id: users[0].id },
-                       { title: 'JAVA_middle', level: 1, categories_id: categories[2].id, users_id: users[1].id },
-                       { title: 'JAVA_middle', level: 2, categories_id: categories[2].id, users_id: users[2].id },
-                       { title: 'JAVA_senior', level: 3, categories_id: categories[2].id, users_id: users[3].id }
+                       { title: 'Rails_novice', level: 0, categories_id: categories[0].id },
+                       { title: 'Rails_junior', level: 1, categories_id: categories[0].id },
+                       { title: 'Rails_middle', level: 2, categories_id: categories[0].id },
+                       { title: 'Rails_senior', level: 3, categories_id: categories[0].id },
+                       { title: 'HTML_novice', level: 0, categories_id: categories[1].id },
+                       { title: 'HTML_middle', level: 1, categories_id: categories[1].id },
+                       { title: 'HTML_middle', level: 2, categories_id: categories[1].id },
+                       { title: 'HTML_senior', level: 3, categories_id: categories[1].id },
+                       { title: 'JAVA_novice', level: 0, categories_id: categories[2].id },
+                       { title: 'JAVA_middle', level: 1, categories_id: categories[2].id },
+                       { title: 'JAVA_middle', level: 2, categories_id: categories[2].id },
+                       { title: 'JAVA_senior', level: 3, categories_id: categories[2].id }
                      ])
+
+users_tests = UsersTest.create!([
+                                  { users_id: users[0].id, tests_id: tests[0].id },
+                                  { users_id: users[0].id, tests_id: tests[1].id },
+                                  { users_id: users[0].id, tests_id: tests[2].id },
+                                  { users_id: users[0].id, tests_id: tests[3].id },
+                                  { users_id: users[0].id, tests_id: tests[4].id },
+                                  { users_id: users[1].id, tests_id: tests[2].id },
+                                  { users_id: users[1].id, tests_id: tests[3].id },
+                                  { users_id: users[1].id, tests_id: tests[4].id },
+                                  { users_id: users[2].id, tests_id: tests[4].id },
+                                  { users_id: users[2].id, tests_id: tests[5].id },
+                                  { users_id: users[2].id, tests_id: tests[6].id }
+                                ])
 
 questions = Question.create!([
                                { body: 'question_01', tests_id: tests[0].id },

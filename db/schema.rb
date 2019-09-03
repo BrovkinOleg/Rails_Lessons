@@ -40,9 +40,7 @@ ActiveRecord::Schema.define(version: 20_190_831_090_000) do
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
     t.integer 'categories_id'
-    t.integer 'users_id'
     t.index ['categories_id'], name: 'index_tests_on_categories_id'
-    t.index ['users_id'], name: 'index_tests_on_users_id'
   end
 
   create_table 'users', force: :cascade do |t|
@@ -51,8 +49,18 @@ ActiveRecord::Schema.define(version: 20_190_831_090_000) do
     t.datetime 'updated_at', precision: 6, null: false
   end
 
+  create_table 'users_tests', force: :cascade do |t|
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.integer 'tests_id'
+    t.integer 'users_id'
+    t.index ['tests_id'], name: 'index_users_tests_on_tests_id'
+    t.index ['users_id'], name: 'index_users_tests_on_users_id'
+  end
+
   add_foreign_key 'answers', 'questions', column: 'questions_id'
   add_foreign_key 'questions', 'tests', column: 'tests_id'
   add_foreign_key 'tests', 'categories', column: 'categories_id'
-  add_foreign_key 'tests', 'users', column: 'users_id'
+  add_foreign_key 'users_tests', 'tests', column: 'tests_id'
+  add_foreign_key 'users_tests', 'users', column: 'users_id'
 end
