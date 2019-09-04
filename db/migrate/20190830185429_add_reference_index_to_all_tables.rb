@@ -5,7 +5,5 @@ class AddReferenceIndexToAllTables < ActiveRecord::Migration[6.0]
     add_reference(:tests, :user, foreign_key: true)
     add_reference(:questions, :test, foreign_key: true)
     add_reference(:answers, :question, foreign_key: true)
-    add_reference(:users_tests, :tests, foreign_key: true)
-    add_reference(:users_tests, :users, foreign_key: true)
   end
 end

@@ -3,7 +3,7 @@
 # You must delete tables in back order due to FOREIGN KEY
 Answer.delete_all
 Question.delete_all
-UsersTest.delete_all
+# TestsUser.delete_all
 Test.delete_all
 Category.delete_all
 User.delete_all
@@ -33,19 +33,19 @@ tests = Test.create!([
                        { title: 'JAVA_senior', level: 3, category_id: categories[2].id, user_id: users[0].id }
                      ])
 
-users_tests = UsersTest.create!([
-                                  { users_id: users[3].id, tests_id: tests[0].id },
-                                  { users_id: users[3].id, tests_id: tests[1].id },
-                                  { users_id: users[3].id, tests_id: tests[2].id },
-                                  { users_id: users[3].id, tests_id: tests[3].id },
-                                  { users_id: users[3].id, tests_id: tests[4].id },
-                                  { users_id: users[1].id, tests_id: tests[2].id },
-                                  { users_id: users[1].id, tests_id: tests[3].id },
-                                  { users_id: users[1].id, tests_id: tests[4].id },
-                                  { users_id: users[2].id, tests_id: tests[4].id },
-                                  { users_id: users[2].id, tests_id: tests[5].id },
-                                  { users_id: users[2].id, tests_id: tests[6].id }
-                                ])
+# users_tests = UsersTest.create!([
+#                                   { users_id: users[3].id, tests_id: tests[0].id },
+#                                   { users_id: users[3].id, tests_id: tests[1].id },
+#                                   { users_id: users[3].id, tests_id: tests[2].id },
+#                                   { users_id: users[3].id, tests_id: tests[3].id },
+#                                   { users_id: users[3].id, tests_id: tests[4].id },
+#                                   { users_id: users[1].id, tests_id: tests[2].id },
+#                                   { users_id: users[1].id, tests_id: tests[3].id },
+#                                   { users_id: users[1].id, tests_id: tests[4].id },
+#                                   { users_id: users[2].id, tests_id: tests[4].id },
+#                                   { users_id: users[2].id, tests_id: tests[5].id },
+#                                   { users_id: users[2].id, tests_id: tests[6].id }
+#                                 ])
 
 questions = Question.create!([
                                { body: 'question_01', test_id: tests[0].id },
