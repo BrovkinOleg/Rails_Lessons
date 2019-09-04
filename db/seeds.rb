@@ -3,7 +3,7 @@
 # You must delete tables in back order due to FOREIGN KEY
 Answer.delete_all
 Question.delete_all
-# TestsUser.delete_all
+# UsersTest.delete_all
 Test.delete_all
 Category.delete_all
 User.delete_all
