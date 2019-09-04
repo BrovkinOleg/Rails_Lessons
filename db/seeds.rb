@@ -19,26 +19,26 @@ users = User.create!([
                      ])
 
 tests = Test.create!([
-                       { title: 'Rails_novice', level: 0, category_id: categories[0].id },
-                       { title: 'Rails_junior', level: 1, category_id: categories[0].id },
-                       { title: 'Rails_middle', level: 2, category_id: categories[0].id },
-                       { title: 'Rails_senior', level: 3, category_id: categories[0].id },
-                       { title: 'HTML_novice', level: 0, category_id: categories[1].id },
-                       { title: 'HTML_middle', level: 1, category_id: categories[1].id },
-                       { title: 'HTML_middle', level: 2, category_id: categories[1].id },
-                       { title: 'HTML_senior', level: 3, category_id: categories[1].id },
-                       { title: 'JAVA_novice', level: 0, category_id: categories[2].id },
-                       { title: 'JAVA_middle', level: 1, category_id: categories[2].id },
-                       { title: 'JAVA_middle', level: 2, category_id: categories[2].id },
-                       { title: 'JAVA_senior', level: 3, category_id: categories[2].id }
+                       { title: 'Rails_novice', level: 0, category_id: categories[0].id, user_id: users[0].id },
+                       { title: 'Rails_junior', level: 1, category_id: categories[0].id, user_id: users[0].id },
+                       { title: 'Rails_middle', level: 2, category_id: categories[0].id, user_id: users[0].id },
+                       { title: 'Rails_senior', level: 3, category_id: categories[0].id, user_id: users[0].id },
+                       { title: 'HTML_novice', level: 0, category_id: categories[1].id, user_id: users[0].id },
+                       { title: 'HTML_middle', level: 1, category_id: categories[1].id, user_id: users[0].id },
+                       { title: 'HTML_middle', level: 2, category_id: categories[1].id, user_id: users[0].id },
+                       { title: 'HTML_senior', level: 3, category_id: categories[1].id, user_id: users[0].id },
+                       { title: 'JAVA_novice', level: 0, category_id: categories[2].id, user_id: users[0].id },
+                       { title: 'JAVA_middle', level: 1, category_id: categories[2].id, user_id: users[0].id },
+                       { title: 'JAVA_middle', level: 2, category_id: categories[2].id, user_id: users[0].id },
+                       { title: 'JAVA_senior', level: 3, category_id: categories[2].id, user_id: users[0].id }
                      ])
 
 users_tests = UsersTest.create!([
-                                  { users_id: users[0].id, tests_id: tests[0].id },
-                                  { users_id: users[0].id, tests_id: tests[1].id },
-                                  { users_id: users[0].id, tests_id: tests[2].id },
-                                  { users_id: users[0].id, tests_id: tests[3].id },
-                                  { users_id: users[0].id, tests_id: tests[4].id },
+                                  { users_id: users[3].id, tests_id: tests[0].id },
+                                  { users_id: users[3].id, tests_id: tests[1].id },
+                                  { users_id: users[3].id, tests_id: tests[2].id },
+                                  { users_id: users[3].id, tests_id: tests[3].id },
+                                  { users_id: users[3].id, tests_id: tests[4].id },
                                   { users_id: users[1].id, tests_id: tests[2].id },
                                   { users_id: users[1].id, tests_id: tests[3].id },
                                   { users_id: users[1].id, tests_id: tests[4].id },
