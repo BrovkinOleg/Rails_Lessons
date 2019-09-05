@@ -1,9 +1,8 @@
 class Test < ApplicationRecord
-  has_many :questions
   belongs_to :user
   belongs_to :category
-  # has_and_belongs_to_many :users
-  has_many :tests_users
+  has_many :questions, dependent: :destroy
+  has_many :tests_users, dependent: :destroy
   has_many :users, through: :tests_users
 
   def self.tests_array_show(category)

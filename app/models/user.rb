@@ -1,7 +1,6 @@
 class User < ApplicationRecord
-  has_many :tests
-  # has_and_belongs_to_many :tests
-  has_many :tests_users
+  has_many :tests, dependent: :destroy
+  has_many :tests_users, dependent: :destroy
   has_many :tests, through: :tests_users
 
   def tests_list_show(level)
