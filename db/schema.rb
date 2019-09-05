@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20_190_831_090_000) do
   create_table 'tests_users', id: false, force: :cascade do |t|
     t.integer 'test_id', null: false
     t.integer 'user_id', null: false
-    t.index %w[test_id user_id], name: 'index_tests_users_on_test_id_and_user_id', unique: true
+    t.index %w[test_id user_id], name: 'index_tests_users_on_test_id_and_user_id'
   end
 
   create_table 'users', force: :cascade do |t|

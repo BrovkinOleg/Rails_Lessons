@@ -3,7 +3,6 @@
 # You must delete tables in back order due to FOREIGN KEY
 Answer.delete_all
 Question.delete_all
-# UsersTest.delete_all
 Test.delete_all
 Category.delete_all
 User.delete_all
@@ -33,19 +32,17 @@ tests = Test.create!([
                        { title: 'JAVA_senior', level: 3, category_id: categories[2].id, user_id: users[0].id }
                      ])
 
-# users_tests = UsersTest.create!([
-#                                   { users_id: users[3].id, tests_id: tests[0].id },
-#                                   { users_id: users[3].id, tests_id: tests[1].id },
-#                                   { users_id: users[3].id, tests_id: tests[2].id },
-#                                   { users_id: users[3].id, tests_id: tests[3].id },
-#                                   { users_id: users[3].id, tests_id: tests[4].id },
-#                                   { users_id: users[1].id, tests_id: tests[2].id },
-#                                   { users_id: users[1].id, tests_id: tests[3].id },
-#                                   { users_id: users[1].id, tests_id: tests[4].id },
-#                                   { users_id: users[2].id, tests_id: tests[4].id },
-#                                   { users_id: users[2].id, tests_id: tests[5].id },
-#                                   { users_id: users[2].id, tests_id: tests[6].id }
-#                                 ])
+User.find(1).tests.push(Test.find(1))
+User.find(2).tests.push(Test.find(2))
+User.find(3).tests.push(Test.find(3))
+User.find(4).tests.push(Test.find(4))
+User.find(5).tests.push(Test.find(5))
+
+Test.find(1).users.push(User.find(5))
+Test.find(2).users.push(User.find(4))
+Test.find(3).users.push(User.find(3))
+Test.find(4).users.push(User.find(2))
+Test.find(5).users.push(User.find(1))
 
 questions = Question.create!([
                                { body: 'question_01', test_id: tests[0].id },
