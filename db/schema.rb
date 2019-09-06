@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20_190_831_090_000) do
     t.integer 'category_id'
     t.integer 'question_id'
     t.integer 'user_id'
-    t.integer 'admin_id', default: 0, null: false
+    t.integer 'admin_id'
     t.index ['admin_id'], name: 'index_tests_on_admin_id'
     t.index ['category_id'], name: 'index_tests_on_category_id'
     t.index ['question_id'], name: 'index_tests_on_question_id'
@@ -66,4 +66,5 @@ ActiveRecord::Schema.define(version: 20_190_831_090_000) do
   add_foreign_key 'tests', 'categories'
   add_foreign_key 'tests', 'questions'
   add_foreign_key 'tests', 'users'
+  add_foreign_key 'tests', 'users', column: 'admin_id'
 end
