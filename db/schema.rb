@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20_190_831_090_000) do
   create_table 'answers', force: :cascade do |t|
     t.string 'body', null: false
-    t.boolean 'correct', default: false, null: false
+    t.boolean 'correct', default: false
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
     t.integer 'question_id'
@@ -36,14 +36,14 @@ ActiveRecord::Schema.define(version: 20_190_831_090_000) do
 
   create_table 'tests', force: :cascade do |t|
     t.string 'title', null: false
-    t.integer 'level', default: 0, null: false
+    t.integer 'level', default: 0
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
     t.integer 'category_id'
-    t.integer 'questions_id'
+    t.integer 'question_id'
     t.integer 'user_id'
     t.index ['category_id'], name: 'index_tests_on_category_id'
-    t.index ['questions_id'], name: 'index_tests_on_questions_id'
+    t.index ['question_id'], name: 'index_tests_on_question_id'
     t.index ['user_id'], name: 'index_tests_on_user_id'
   end
 
@@ -62,6 +62,6 @@ ActiveRecord::Schema.define(version: 20_190_831_090_000) do
   add_foreign_key 'answers', 'questions'
   add_foreign_key 'questions', 'tests'
   add_foreign_key 'tests', 'categories'
-  add_foreign_key 'tests', 'questions', column: 'questions_id'
+  add_foreign_key 'tests', 'questions'
   add_foreign_key 'tests', 'users'
 end

@@ -11,7 +11,7 @@ User.delete_all
 categories = Category.create!([{ title: 'rails' }, { title: 'html' }, { title: 'java' }])
 
 users = User.create!([
-                       { name: 'Admin' },
+                       { name: 'Author' },
                        { name: 'Sara' },
                        { name: 'Jack' },
                        { name: 'Bill' },
@@ -19,60 +19,60 @@ users = User.create!([
                      ])
 
 tests = Test.create!([
-                       { title: 'Rails_novice', level: 0, category_id: categories[0].id, user_id: users[0].id },
-                       { title: 'Rails_junior', level: 1, category_id: categories[0].id, user_id: users[0].id },
-                       { title: 'Rails_middle', level: 2, category_id: categories[0].id, user_id: users[0].id },
-                       { title: 'Rails_senior', level: 3, category_id: categories[0].id, user_id: users[0].id },
-                       { title: 'HTML_novice', level: 0, category_id: categories[1].id, user_id: users[0].id },
-                       { title: 'HTML_middle', level: 1, category_id: categories[1].id, user_id: users[0].id },
-                       { title: 'HTML_middle', level: 2, category_id: categories[1].id, user_id: users[0].id },
-                       { title: 'HTML_senior', level: 3, category_id: categories[1].id, user_id: users[0].id },
-                       { title: 'JAVA_novice', level: 0, category_id: categories[2].id, user_id: users[0].id },
-                       { title: 'JAVA_middle', level: 1, category_id: categories[2].id, user_id: users[0].id },
-                       { title: 'JAVA_middle', level: 2, category_id: categories[2].id, user_id: users[0].id },
-                       { title: 'JAVA_senior', level: 3, category_id: categories[2].id, user_id: users[0].id }
+                       # { title: 'Rails_novice', level: 0, category: categories[0], admin: users[0] }
+                       # { title: 'Rails_junior', level: 1, category: categories[0], user: users[0] },
+                       # { title: 'Rails_middle', level: 2, category: categories[0], user: users[0] },
+                       # { title: 'Rails_senior', level: 3, category: categories[0], user: users[0] },
+                       # { title: 'HTML_novice', level: 0, category: categories[1], user: users[0] },
+                       # { title: 'HTML_middle', level: 1, category: categories[1], user: users[0] },
+                       # { title: 'HTML_middle', level: 2, category: categories[1], user: users[0] },
+                       # { title: 'HTML_senior', level: 3, category: categories[1], user: users[0] },
+                       # { title: 'JAVA_novice', level: 0, category: categories[2], user: users[0] },
+                       # { title: 'JAVA_middle', level: 1, category: categories[2], user: users[0] },
+                       # { title: 'JAVA_middle', level: 2, category: categories[2], user: users[0] },
+                       # { title: 'JAVA_senior', level: 3, category: categories[2], user: users[0] }
                      ])
 
 tests_users = TestsUser.create!([
-                                  { user_id: users[0].id, test_id: tests[0].id },
-                                  { user_id: users[0].id, test_id: tests[1].id },
-                                  { user_id: users[2].id, test_id: tests[0].id },
-                                  { user_id: users[2].id, test_id: tests[1].id },
-                                  { user_id: users[2].id, test_id: tests[2].id },
-                                  { user_id: users[3].id, test_id: tests[0].id },
-                                  { user_id: users[3].id, test_id: tests[1].id },
-                                  { user_id: users[3].id, test_id: tests[2].id },
-                                  { user_id: users[4].id, test_id: tests[0].id },
-                                  { user_id: users[4].id, test_id: tests[1].id },
-                                  { user_id: users[4].id, test_id: tests[2].id }
+                                  # { user: users[0], test: tests[0] },
+                                  # { user: users[0], test: tests[1] },
+                                  # { user: users[2], test: tests[0] },
+                                  # { user: users[2], test: tests[1] },
+                                  # { user: users[2], test: tests[2] },
+                                  # { user: users[3], test: tests[0] },
+                                  # { user: users[3], test: tests[1] },
+                                  # { user: users[3], test: tests[2] },
+                                  # { user: users[4], test: tests[0] },
+                                  # { user: users[4], test: tests[1] },
+                                  # { user: users[4], test: tests[2] }
                                 ])
 
 questions = Question.create!([
-                               { body: 'question_01', test_id: tests[0].id },
-                               { body: 'question_02', test_id: tests[1].id },
-                               { body: 'question_03', test_id: tests[2].id },
-                               { body: 'question_04', test_id: tests[3].id },
-                               { body: 'question_05', test_id: tests[4].id },
-                               { body: 'question_06', test_id: tests[5].id },
-                               { body: 'question_07', test_id: tests[6].id },
-                               { body: 'question_08', test_id: tests[7].id },
-                               { body: 'question_09', test_id: tests[8].id },
-                               { body: 'question_10', test_id: tests[9].id },
-                               { body: 'question_11', test_id: tests[10].id },
-                               { body: 'question_12', test_id: tests[11].id }
+                               # { body: 'question_01', test: tests[0] },
+                               # { body: 'question_02', test: tests[1] },
+                               # { body: 'question_03', test: tests[2] },
+                               # { body: 'question_04', test: tests[3] },
+                               # { body: 'question_05', test: tests[4] },
+                               # { body: 'question_06', test: tests[5] },
+                               # { body: 'question_07', test: tests[6] },
+                               # { body: 'question_08', test: tests[7] },
+                               # { body: 'question_09', test: tests[8] },
+                               # { body: 'question_10', test: tests[9] },
+                               # { body: 'question_11', test: tests[10] },
+                               # { body: 'question_12', test: tests[11] }
                              ])
 
 Answer.create!([
-                 { body: 'answer_01', question_id: questions[0].id },
-                 { body: 'answer_02', question_id: questions[1].id },
-                 { body: 'answer_03', question_id: questions[2].id },
-                 { body: 'answer_04', question_id: questions[3].id },
-                 { body: 'answer_05', question_id: questions[4].id },
-                 { body: 'answer_06', question_id: questions[5].id },
-                 { body: 'answer_07', question_id: questions[6].id },
-                 { body: 'answer_08', question_id: questions[7].id },
-                 { body: 'answer_09', question_id: questions[8].id },
-                 { body: 'answer_10', question_id: questions[9].id },
-                 { body: 'answer_11', question_id: questions[10].id },
-                 { body: 'answer_11', question_id: questions[10].id }
+                 # { body: 'answer_01', question: questions[0] },
+                 # { body: 'answer_02', question: questions[1] },
+                 # { body: 'answer_03', question: questions[2] },
+                 # { body: 'answer_04', question: questions[3] },
+                 # { body: 'answer_05', question: questions[4] },
+                 # { body: 'answer_06', question: questions[5] },
+                 # { body: 'answer_07', question: questions[6] },
+                 # { body: 'answer_08', question: questions[7] },
+                 # { body: 'answer_09', question: questions[8] },
+                 # { body: 'answer_10', question: questions[9] },
+                 # { body: 'answer_11', question: questions[10] },
+                 # { body: 'answer_11', question: questions[10] }
                ])
