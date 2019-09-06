@@ -6,6 +6,6 @@ class Test < ApplicationRecord
   has_many :users, through: :tests_users
 
   def self.tests_array_show(category)
-    joins(:category).where(categories: { title: category }).order(id: :desk).pluck(:title)
+    joins(:category).where(categories: { title: category }).order(id: :desc).pluck(:title)
   end
 end
