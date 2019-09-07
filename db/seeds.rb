@@ -24,11 +24,11 @@ tests = Test.create!([
                        { title: 'Rails_middle', level: 2, category: categories[0], admin: users[0] },
                        { title: 'Rails_senior', level: 3, category: categories[0], admin: users[0] },
                        { title: 'HTML_novice', level: 0, category: categories[1], admin: users[0] },
-                       { title: 'HTML_middle', level: 1, category: categories[1], admin: users[0] },
+                       { title: 'HTML_junior', level: 1, category: categories[1], admin: users[0] },
                        { title: 'HTML_middle', level: 2, category: categories[1], admin: users[0] },
                        { title: 'HTML_senior', level: 3, category: categories[1], admin: users[0] },
                        { title: 'JAVA_novice', level: 0, category: categories[2], admin: users[0] },
-                       { title: 'JAVA_middle', level: 1, category: categories[2], admin: users[0] },
+                       { title: 'JAVA_junior', level: 1, category: categories[2], admin: users[0] },
                        { title: 'JAVA_middle', level: 2, category: categories[2], admin: users[0] },
                        { title: 'JAVA_senior', level: 3, category: categories[2], admin: users[0] }
                      ])

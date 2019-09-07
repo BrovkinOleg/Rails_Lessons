@@ -5,7 +5,9 @@ class Test < ApplicationRecord
   has_many :tests_users, dependent: :destroy
   has_many :users, through: :tests_users
 
-  def self.tests_array_show(category)
-    joins(:category).where(categories: { title: category }).order(id: :desc).pluck(:title)
-  end
+  scope :easy, -> { where(level: [0, 1]) }
+  scope :middle, -> { where(level: 2..4) }
+  scope :heavy, -> { where(level: 5..Float::INFINITY) }
+  scope :my_order, -> { order(id: :desc).pluck(:title) }
+  scope :tests_array_show, ->(category) { joins(:category).where(categories: { title: category }).my_order }
 end
