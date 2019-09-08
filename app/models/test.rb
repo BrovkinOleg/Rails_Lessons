@@ -12,6 +12,9 @@ class Test < ApplicationRecord
   scope :easy, -> { where(level: [0, 1]) }
   scope :middle, -> { where(level: 2..4) }
   scope :heavy, -> { where(level: 5..Float::INFINITY) }
-  scope :my_order, -> { order(id: :desc).pluck(:title) }
-  scope :tests_array_show, ->(category) { joins(:category).where(categories: { title: category }).my_order }
+  scope :tests_scope, ->(category) { joins(:category).where(categories: { title: category }) }
+
+  def self.tests_array_show(category)
+    tests_scope(category).order(id: :desc).pluck(:title)
+  end
 end

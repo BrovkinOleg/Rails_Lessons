@@ -63,16 +63,16 @@ questions = Question.create!([
                              ])
 
 Answer.create!([
-                 # { body: 'answer_01', question: questions[0] },
-                 # { body: 'answer_02', question: questions[1] },
-                 # { body: 'answer_03', question: questions[2] },
-                 # { body: 'answer_04', question: questions[3] },
-                 # { body: 'answer_05', question: questions[4] },
-                 # { body: 'answer_06', question: questions[5] },
-                 # { body: 'answer_07', question: questions[6] },
-                 # { body: 'answer_08', question: questions[7] },
-                 # { body: 'answer_09', question: questions[8] },
-                 # { body: 'answer_10', question: questions[9] },
-                 # { body: 'answer_11', question: questions[10] },
-                 # { body: 'answer_12', question: questions[11] }
+                 { body: 'answer_01', question: questions[0] },
+                 { body: 'answer_02', question: questions[1] },
+                 { body: 'answer_03', question: questions[2] },
+                 { body: 'answer_04', question: questions[3] },
+                 { body: 'answer_05', question: questions[4] },
+                 { body: 'answer_06', question: questions[5] },
+                 { body: 'answer_07', question: questions[6] },
+                 { body: 'answer_08', question: questions[7] },
+                 { body: 'answer_09', question: questions[8] },
+                 { body: 'answer_10', question: questions[9] },
+                 { body: 'answer_11', question: questions[10] },
+                 { body: 'answer_12', question: questions[11] }
                ])
