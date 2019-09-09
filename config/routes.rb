@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  # resources :tests
+  # root 'tests#show'
 
   resources :tests do
-    resources :questions
+    resource :questions
   end
 
+  get '/tests/:test_id/questions/:question_id', to: 'questions#show_the_question'
 end

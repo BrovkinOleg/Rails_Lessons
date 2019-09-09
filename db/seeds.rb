@@ -49,8 +49,8 @@ tests_users = TestsUser.create!([
 
 questions = Question.create!([
                                { body: 'question_01', test: tests[0] },
-                               { body: 'question_02', test: tests[1] },
-                               { body: 'question_03', test: tests[2] },
+                               { body: 'question_02', test: tests[0] },
+                               { body: 'question_03', test: tests[0] },
                                { body: 'question_04', test: tests[3] },
                                { body: 'question_05', test: tests[4] },
                                { body: 'question_06', test: tests[5] },
