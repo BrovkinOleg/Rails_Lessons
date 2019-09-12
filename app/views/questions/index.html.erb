@@ -1,0 +1,28 @@
+<h1>Show All Tests</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Questions count</th>
+    <th colspan="3">Action</th>
+  </tr>
+
+  <%#= render @tests %>
+</table>
+<br>
+<h3><%= link_to 'Create New Test', new_test_path %></h3>
+
+<!--<h1>Questions for test</h1>-->
+
+<%#= form_with model: @test do |form| %>
+<!--  <p>-->
+    <%#= label_tag('Title') %>
+    <%#= form.text_field :title %>
+<!--  </p>-->
+
+<!--  <p>-->
+    <%#= label_tag('Level') %>
+    <%#= form.text_field :level %>
+<!--  </p>-->
+<!--  <p><%##= submit_tag("Search") %></p>-->
+<%# end %>

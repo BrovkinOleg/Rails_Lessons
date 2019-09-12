@@ -1,15 +1,18 @@
 class QuestionsController < ApplicationController
-  before_action :find_question, only: %i[show destroy del_question]
   before_action :find_test, only: %i[index create]
+  before_action :find_question, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    render plain: @test.questions.inspect
+    # @test = Test.first
+    # @question = @test.questions
+    # render plain: @test.questions.inspect
+    # render plain: @test.inspect
   end
 
   def new
-    # render file: '../views/questions/new.html.erb', layout: false
+
   end
 
   def create
@@ -38,6 +41,8 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = Question.find(params[:id])
+    # @question = Question.all
+    # @question = @test.questions.all
   end
 
   def find_test
