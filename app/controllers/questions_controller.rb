@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
   end
 
   def new
-    render file: '../views/questions/new.html.erb', layout: false
+    # render file: '../views/questions/new.html.erb', layout: false
   end
 
   def create
