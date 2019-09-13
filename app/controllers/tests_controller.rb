@@ -12,9 +12,7 @@ class TestsController < ApplicationController
     @test = Test.new
   end
 
-  def edit
-    # render plain: 'hello'
-  end
+  def edit; end
 
   def create
     @test = Test.new(test_params)
@@ -48,7 +46,7 @@ class TestsController < ApplicationController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id, :admin_id)
+    params.require(:test).permit(:title, :level, :category_id, :admin_id, :id)
   end
 
   def rescue_with_test_not_found

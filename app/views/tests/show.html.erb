@@ -1,5 +1,5 @@
 
-<h2>Test "<%= @test.title %>" has <%= @test.questions.count %> question(s) </h2>
+<h2>Test "<%= @test.title %>" has <%= pluralize(@test.questions.count, 'question') %></h2>
 <br>
 <table>
   <tr>
