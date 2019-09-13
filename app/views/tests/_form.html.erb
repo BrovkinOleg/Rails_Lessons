@@ -1,19 +1,19 @@
 <%= form_with model: @test, local: true do |form| %>
   <%= render 'shared/errors', resource: test %>
   <p>
-    <%= label_tag 'title' %><br>
+    <%= label_tag 'Enter title of the test' %><br>
     <%= form.text_field :title, id: :test_title %>
   </p>
   <p>
-    <%= label_tag 'level' %><br>
+    <%= label_tag 'Enter complexity level' %><br>
     <%= form.number_field :level, id: :test_level %>
   </p>
   <p>
-    <%= label_tag 'category_id' %><br>
+    <%= label_tag 'Choose category_id' %><br>
     <%= form.collection_select :category_id, Category.all, :id, :title %>
   </p>
   <p>
-    <%= label_tag 'Name' %><br>
+    <%= label_tag 'Choose patient :))' %><br>
     <%= form.collection_select :admin_id, User.all, :id, :name %><br>
   </p>
   <p><%= submit_tag 'Submit' %></p>

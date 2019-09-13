@@ -1,5 +1,5 @@
 
-<h2>Test <%= @test.title %> has <%= @test.questions.count %> question(s) </h2>
+<h2>Test "<%= @test.title %>" has <%= @test.questions.count %> question(s) </h2>
 <br>
 <table>
   <tr>
@@ -11,5 +11,4 @@
 <h3>
   <%= link_to 'Create new question', new_test_question_path(@test) %>
 </h3>
-<br>
 <%= link_to 'Back', tests_path %>
