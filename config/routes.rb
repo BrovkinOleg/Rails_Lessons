@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   end
 
   # get '/tests/:test_id/questions/:id/del', to: 'questions#destroy'
-
+  # post '/tests/:id/destroy', to: 'tests#destroy', as: :test_destroy
 end
