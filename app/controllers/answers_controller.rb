@@ -30,7 +30,7 @@ class AnswersController < ApplicationController
 
   def destroy
     @answer.destroy
-    redirect_to answers.question
+    redirect_to @answer.question
   end
 
   private
