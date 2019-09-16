@@ -33,20 +33,6 @@ tests = Test.create!([
                        { title: 'JAVA_senior', level: 3, category: categories[2], admin: users[0] }
                      ])
 
-# tests_users = TestPassage.create!([
-#                                   { user_id: users[0], test_id: tests[0] },
-#                                   { user_id: users[0], test_id: tests[4] },
-#                                   { user_id: users[0], test_id: tests[8] },
-#                                   { user_id: users[2], test_id: tests[1] },
-#                                   { user_id: users[2], test_id: tests[2] },
-#                                   { user_id: users[3], test_id: tests[0] },
-#                                   { user_id: users[3], test_id: tests[1] },
-#                                   { user_id: users[3], test_id: tests[2] },
-#                                   { user_id: users[4], test_id: tests[0] },
-#                                   { user_id: users[4], test_id: tests[1] },
-#                                   { user_id: users[4], test_id: tests[2] }
-#                                 ])
-
 questions = Question.create!([
                                { body: 'question_01', test: tests[0] },
                                { body: 'question_02', test: tests[0] },
@@ -76,3 +62,17 @@ Answer.create!([
                  { body: 'answer_11', question: questions[10] },
                  { body: 'answer_12', question: questions[11] }
                ])
+
+# tests_users = TestPassage.create!([
+#                                       { user: users[0], test: tests[0] } ])
+#                                   { user_id: users[0], test_id: tests[4] },
+#                                   { user_id: users[0], test_id: tests[8] },
+#                                   { user_id: users[2], test_id: tests[1] },
+#                                   { user_id: users[2], test_id: tests[2] },
+#                                   { user_id: users[3], test_id: tests[0] },
+#                                   { user_id: users[3], test_id: tests[1] },
+#                                   { user_id: users[3], test_id: tests[2] },
+#                                   { user_id: users[4], test_id: tests[0] },
+#                                   { user_id: users[4], test_id: tests[1] },
+#                                   { user_id: users[4], test_id: tests[2] }
+#                                 ])
