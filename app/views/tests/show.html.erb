@@ -1,9 +1,10 @@
 
 <h2>Test "<%= @test.title %>" has <%= pluralize(@test.questions.count, 'question') %></h2>
-<br>
+<h2>level: <%= @test.level %></h2><br>
+<h2>Questions</h2>
+
 <table>
   <tr>
-    <th>Question</th>
     <th colspan="3">Action</th>
   </tr>
   <%= render @test.questions %>
