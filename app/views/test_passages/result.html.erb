@@ -1,7 +1,13 @@
 <h1>The "<%= @test_passage.test.title %>" Test was Completed</h1>
 
 <div>
-  <%= result_color_and_percent(@test_passage.result) %>
+  <% if @test_passage.success? %>
+    <h2 style='color: green'>You answered <%= @test_passage.result %>% questions.
+        Test successfully passed!</h2>
+  <% else %>
+    <h2 style='color: red'>You answered <%= @test_passage.result %>% questions.
+        Test failed!</h2>
+  <% end %>
 </div>
 
 <ul>
