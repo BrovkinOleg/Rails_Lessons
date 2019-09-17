@@ -1,10 +1,8 @@
 <h1>The "<%= @test_passage.test.title %>" Test was Completed</h1>
 
-<h2>Result Test:
-  <span class="<%= @test_passage.success? ? 'success' : 'failed' %>">
-      <%= number_to_percentage(@test_passage.result, precision: 2) %>
-  </span>
-</h2>
+<div>
+  <%= result_color_and_percent(@test_passage.result) %>
+</div>
 
 <ul>
   <li>Correct answers: <%= @test_passage.correct_questions %></li>

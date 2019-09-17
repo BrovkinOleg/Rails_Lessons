@@ -9,7 +9,7 @@ class TestPassage < ApplicationRecord
   CORRECT_ANSWERS_PERCENT = 85
 
   def result
-    (self.correct_questions.to_f * 100) / questions_number
+    (correct_questions.to_f * 100) / questions_number
   end
 
   def success?
