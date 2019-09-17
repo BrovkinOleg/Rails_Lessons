@@ -2,8 +2,8 @@
 
 # You must delete tables in back order due to FOREIGN KEY
 Answer.delete_all
+TestPassage.delete_all
 Question.delete_all
-# TestPassage.delete_all
 Test.delete_all
 Category.delete_all
 User.delete_all
@@ -63,16 +63,17 @@ Answer.create!([
                  { body: 'answer_12', question: questions[11] }
                ])
 
-# tests_users = TestPassage.create!([
-#                                       { user: users[0], test: tests[0] } ])
-#                                   { user_id: users[0], test_id: tests[4] },
-#                                   { user_id: users[0], test_id: tests[8] },
-#                                   { user_id: users[2], test_id: tests[1] },
-#                                   { user_id: users[2], test_id: tests[2] },
-#                                   { user_id: users[3], test_id: tests[0] },
-#                                   { user_id: users[3], test_id: tests[1] },
-#                                   { user_id: users[3], test_id: tests[2] },
-#                                   { user_id: users[4], test_id: tests[0] },
-#                                   { user_id: users[4], test_id: tests[1] },
-#                                   { user_id: users[4], test_id: tests[2] }
-#                                 ])
+tests_users = TestPassage.create!([
+                                    { user: users[0], test: tests[0], current_question: questions[0] },
+                                    { user: users[1], test: tests[1], current_question: questions[1] },
+                                    { user: users[2], test: tests[2], current_question: questions[2] },
+                                    { user: users[3], test: tests[3], current_question: questions[3] },
+                                    { user: users[4], test: tests[4], current_question: questions[4] },
+                                    { user: users[0], test: tests[5], current_question: questions[5] },
+                                    { user: users[1], test: tests[6], current_question: questions[6] },
+                                    { user: users[2], test: tests[7], current_question: questions[7] },
+                                    { user: users[3], test: tests[8], current_question: questions[8] },
+                                    { user: users[4], test: tests[9], current_question: questions[9] },
+                                    { user: users[0], test: tests[10], current_question: questions[10] },
+                                    { user: users[1], test: tests[11], current_question: questions[11] }
+                                  ])

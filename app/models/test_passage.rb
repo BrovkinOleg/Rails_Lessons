@@ -34,7 +34,7 @@ class TestPassage < ApplicationRecord
   end
 
   def before_validation_set_first_question
-    current_question == test.questions.first if test.present?
+    self.current_question = test.questions.first if test.present?
   end
 
 end
