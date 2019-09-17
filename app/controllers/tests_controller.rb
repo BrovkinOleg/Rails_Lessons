@@ -44,7 +44,11 @@ class TestsController < ApplicationController
 
   def start
     @user.tests.push(@test)
-    redirect_to @user.test_passage(@test)
+    if @test.questions.count.positive?
+      redirect_to @user.test_passage(@test)
+    else
+      redirect_to test_path
+    end
   end
 
   private
