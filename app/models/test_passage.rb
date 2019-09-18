@@ -6,8 +6,6 @@ class TestPassage < ApplicationRecord
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
-  # before_validation :before_validation_set_first_question, on: :create
-  # before_update :before_update_set_next_question
   before_validation :set_current_question
 
   def result
@@ -23,7 +21,7 @@ class TestPassage < ApplicationRecord
   end
 
   def current_question_number
-    test.questions.index(current_question) + 1
+    test.questions.order(:id).where('id < ?', current_question.id).size + 1
   end
 
   def questions_number
@@ -56,14 +54,6 @@ class TestPassage < ApplicationRecord
       test.questions.order(:id).where('id > ?', self.current_question.id).first
     end
   end
-
-  # def before_validation_set_first_question
-  #   self.current_question = test.questions.first if test.present?
-  # end
-  #
-  # def before_update_set_next_question
-  #   self.current_question = next_question
-  # end
 
   def set_current_question
     self.current_question = next_question
