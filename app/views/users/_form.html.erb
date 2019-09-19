@@ -1,6 +1,10 @@
 <%= form_with model: @user, local: true do |form| %>
   <%= render 'shared/errors', resource: @user %>
   <p>
+    <%= label_tag 'name' %><br>
+    <%= form.text_field :name, id: :user_name %>
+  </p>
+  <p>
     <%= label_tag 'email' %><br>
     <%= form.text_field :email, id: :user_email %>
   </p>
@@ -12,5 +16,5 @@
     <%= label_tag 'password_confirmation' %><br>
     <%= form.password_field :password_confirmation, id: :user_password_confirmation %>
   </p>
-  <p><%= submit_tag 'Submit' %></p>
+  <p><%= submit_tag 'Create user' %></p>
 <% end %>
