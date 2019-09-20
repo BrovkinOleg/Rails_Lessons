@@ -7,17 +7,12 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
 
     if user&.authenticate(params[:password])
-      store_location ||= root_path
       session[:user_id] = user.id
-      redirect_to store_location
+      redirect_to cookies[:current_url]
     else
       flash.now[:alert] = 'Invalid email/password combination'
       render :new
     end
-  end
-
-  def store_location
-    cookies[:current_url] = request.original_url if request.get?
   end
 
   def destroy
