@@ -7,7 +7,9 @@ module ApplicationHelper
     link_to 'GitHub', "https://github.com/#{author}/#{repo}", target: :blank
   end
 
-  def flash_message(message)
-    content_tag :p, flash[message], class: 'flash alert' if flash[message]
+  def flash_messages
+    flash.map do |key, msg|
+      content_tag :p, msg, class: "flash #{key}"
+    end.join.html_safe
   end
 end
