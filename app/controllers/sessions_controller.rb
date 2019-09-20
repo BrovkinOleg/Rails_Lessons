@@ -15,6 +15,10 @@ class SessionsController < ApplicationController
     end
   end
 
+  def store_location
+    cookies[:current_url] = request.original_url if request.get?
+  end
+
   def destroy
     session.delete(:user_id)
     redirect_to login_path
