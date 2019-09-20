@@ -11,11 +11,11 @@ User.delete_all
 categories = Category.create!([{ title: 'rails' }, { title: 'html' }, { title: 'java' }])
 
 users = User.create!([
-                       { name: 'Admin', email: 'Admin@thinknetica.ru' },
-                       { name: 'Sara', email: 'Sara@thinknetica.ru' },
-                       { name: 'Jack', email: 'Jack@thinknetica.ru' },
-                       { name: 'Bill', email: 'Bill@thinknetica.ru' },
-                       { name: 'John', email: 'John@thinknetica.ru' }
+                       { name: 'Admin', email: 'Admin@thinknetica.ru', password: 'admin' },
+                       { name: 'Sara', email: 'Sara@thinknetica.ru', password: 'sara' },
+                       { name: 'Jack', email: 'Jack@thinknetica.ru', password: 'jack' },
+                       { name: 'Bill', email: 'Bill@thinknetica.ru', password: 'bill' },
+                       { name: 'John', email: 'John@thinknetica.ru', password: 'john' }
                      ])
 
 tests = Test.create!([

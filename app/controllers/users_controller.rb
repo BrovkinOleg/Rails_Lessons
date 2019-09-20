@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  skip_before_action :authenticate_user!
+
   def new
     @user = User.new
   end
@@ -9,6 +11,7 @@ class UsersController < ApplicationController
 
     if @user.save
       redirect_to tests_path
+      session[:user_id] = @user.id
     else
       render :new
     end

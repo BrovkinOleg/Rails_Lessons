@@ -4,13 +4,13 @@
   <% end %>
 
   <p>
-    <%= label_tag 'email' %><br>
+    <%= form.label :email %><br>
     <%= form.text_field :email, id: :email %>
   </p>
   <p>
-    <%= label_tag 'password' %><br>
+    <%= form.label :password %><br>
     <%= form.password_field :password, id: :password %>
   </p>
 
-  <p><%= submit_tag 'Enter' %></p>
+  <p><%= form.submit 'Enter' %></p>
 <% end %>

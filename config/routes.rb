@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get :signup, to: 'users#new'
   get :login, to: 'sessions#new'
+  delete :logout, to: 'sessions#destroy'
 
   resources :users, only: :create
   resources :sessions, only: :create
@@ -21,4 +22,5 @@ Rails.application.routes.draw do
   resources :test_passages, only: %i[show update] do
     get :result, on: :member
   end
+
 end
