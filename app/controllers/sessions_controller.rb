@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to cookies[:current_url]
+      redirect_to cookies.delete(:current_url) || tests_path
     else
       flash.now[:alert] = 'Invalid email/password combination'
       render :new
