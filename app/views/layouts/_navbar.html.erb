@@ -1,7 +1,7 @@
 <div class="nav user">
 
-  <% if logged_in? %>
-    <h2>Welcome, <%= current_user.name %> Guru</h2>
+  <% if user_signed_in? %>
+    <h2>Welcome, <%= current_user.email %> Guru</h2>
     <ul>
       <li><%= link_to "New Test", new_test_path %></li>
       <li><%= link_to "All Tests", tests_path %></li>
