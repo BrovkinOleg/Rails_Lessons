@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   delete :logout, to: 'sessions#destroy'
 
-  resources :tests do
+  resources :tests, only: :index do
     resources :questions, shallow: true, except: :index do
       resources :answers, shallow: true, except: :index
     end
@@ -20,4 +20,7 @@ Rails.application.routes.draw do
     get :result, on: :member
   end
 
+  namespace :admin do
+    resources :tests
+  end
 end

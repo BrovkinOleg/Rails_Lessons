@@ -1,0 +1,15 @@
+
+<h2>Test "<%= @test.title %>" has <%= pluralize(@test.questions.count, 'question') %></h2>
+<h2>level: <%= @test.level %></h2><br>
+<h2>Questions</h2>
+
+<!--<ol><%#= render @test.questions %></ol>-->
+<ol>
+  <%= render partial: 'questions/question', collection: @test.questions %>
+</ol>
+
+<h3>
+  <%= link_to 'New question', new_test_question_path(@test) %>
+  <%= link_to 'Edit', edit_admin_test_path %>
+  <%= link_to 'Back', admin_tests_path %>
+</h3>
