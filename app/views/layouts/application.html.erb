@@ -12,7 +12,7 @@
   <body>
     <% if user_signed_in? %>
       <p class="nav user">
-        Welcome, <b><%= current_user.email %></b> Guru |
+        Hello, <b><%= current_user.first_name + current_user.last_name %></b> |
         <%= link_to "Logout", destroy_user_session_path, method: :delete %>
       </p>
     <% end %>

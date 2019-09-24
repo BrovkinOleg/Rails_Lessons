@@ -8,7 +8,7 @@ class TestsController < ApplicationController
 
   def start
     if current_user.nil?
-      redirect_to user_session_path, alert: 'You must login.'
+      redirect_to user_session_path, alert: 'You must login first.'
     else
       current_user.tests.push(@test)
       redirect_to current_user.test_passage(@test)
