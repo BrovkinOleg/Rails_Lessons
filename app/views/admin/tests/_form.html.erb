@@ -1,11 +1,11 @@
 <%= form_with model: [:admin, @test], local: true do |form| %>
-  <%= render 'shared/errors', resource: test %>
+  <%= render 'shared/errors', resource: @test %>
   <p>
-    <%= form.label :test_title %><br>
+    <%= form.label :title %><br>
     <%= form.text_field :title, id: :test_title %>
   </p>
   <p>
-    <%= form.label :test_level %><br>
+    <%= form.label :level %><br>
     <%= form.number_field :level, id: :test_level %>
   </p>
   <p>
