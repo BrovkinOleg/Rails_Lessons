@@ -3,11 +3,10 @@
 <h2>level: <%= @test.level %></h2><br>
 <h2>Questions</h2>
 
-<%= link_to 'New question', new_test_question_path(@test) %>
+<%= link_to 'New question', new_admin_test_question_path(@test) %>
 
-<!--<ol><%#= render @test.questions %></ol>-->
 <ol>
-  <%= render partial: 'questions/question', collection: @test.questions %>
+  <%= render @test.questions %>
 </ol>
 
 <tr>

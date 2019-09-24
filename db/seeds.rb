@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # You must delete tables in back order due to FOREIGN KEY
+Admin.delete_all
 Answer.delete_all
 TestPassage.delete_all
 Question.delete_all
@@ -77,3 +78,6 @@ tests_users = TestPassage.create!([
                                     { user: users[0], test: tests[10], current_question: questions[10] },
                                     { user: users[1], test: tests[11], current_question: questions[11] }
                                   ])
+Admin.create!([
+                { email: 'a@a.a', password: 'aaaaaa', first_name: 'Oleg', last_name: 'Brov' }
+              ])
