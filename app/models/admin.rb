@@ -1,6 +1,6 @@
 class Admin < User
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  validates :first_name, :last_name, presence: true
+  has_many :tests, foreign_key: :admin_id, dependent: :destroy
 
 end

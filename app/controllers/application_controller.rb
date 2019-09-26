@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(user)
+    flash[:greeting] = "Welcome, #{user.full_name}"
     if user.admin?
       admin_tests_path
     else
