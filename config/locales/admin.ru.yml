@@ -1,0 +1,20 @@
+ru:
+  admin:
+    nav:
+      header: "Административная панель"
+      welcome: "Добро пожаловать %{name}"
+    tests:
+      create:
+        success: "Тест успешно создан"
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        action: "Действие"
+      show:
+        header: "Тест %{title} содержит (вопросов %{count})"
+        question: "Вопрос"
+        action: "Действие"
+      form:
+        selector: "Выберите категорию"

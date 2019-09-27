@@ -43,6 +43,7 @@ ru:
   test_passages:
     result:
       header: "Тест '%{title}' успешно завершен!"
+      all_tests: "Все тесты"
 
   shared:
     errors:
@@ -51,26 +52,6 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружено %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
-
-  admin:
-    nav:
-      header: "Административная панель"
-      welcome: "Добро пожаловать %{name}"
-    tests:
-      create:
-        success: "Тест успешно создан"
-      index:
-        header: "Доступные тесты"
-        title: "Название"
-        level: "Уровень"
-        questions: "Вопросы"
-        action: "Действие"
-      show:
-        header: "Тест %{title} содержит (вопросов %{count})"
-        question: "Вопрос"
-        action: "Действие"
-      form:
-        selector: "Выберите категорию"
 
   tests_mailer:
     completed_test:

@@ -1,0 +1,20 @@
+en:
+  admin:
+    nav:
+      header: "Admin panel"
+      welcome: "Welcome %{name}"
+    tests:
+      create:
+        success: "Test was successfully created"
+      index:
+        header: "Tricky tests"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        action: "Action"
+      show:
+        header: "The %{title} test has (%{count} questions)"
+        question: "Question"
+        action: "Action"
+      form:
+        selector: "Select category"
