@@ -27,6 +27,8 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+    select:
+      prompt: "Please select"
 
   tests:
     index:
@@ -49,6 +51,9 @@ en:
         other: "%{count} errors detected"
 
   admin:
+    nav:
+      header: "Admin panel"
+      welcome: "Welcome %{name}"
     tests:
       create:
         success: "Test was successfully created"
