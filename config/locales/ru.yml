@@ -1,0 +1,75 @@
+ru:
+  logout: "Выйти"
+  back: "Назад"
+  new_test: "Создать новый тест"
+  new_question: "Создать новый вопрос"
+  show: "Открыть"
+  edit: "Редактировать"
+  delete: "Удалить"
+  sign_up: "Зарегистрироваться"
+  sign_in: "Войти"
+
+  devise:
+    failure:
+      user:
+        unauthenticated: "Вам надо зарегистрироваться"
+    sessions:
+      user:
+        signed_in: "Вы успешно зарегистрировались"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      action: "Действие"
+    test:
+      start: "Начать Тест"
+
+  test_passages:
+    result:
+      header: "Тест '%{title}' успешно завершен!"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  admin:
+    nav:
+      header: "Административная панель"
+      welcome: "Добро пожаловать %{name}"
+    tests:
+      create:
+        success: "Тест успешно создан"
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        action: "Действие"
+      show:
+        header: "Тест %{title} содержит (вопросов %{count})"
+        question: "Вопрос"
+        action: "Действие"
+      form:
+        selector: "Выберите категорию"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест!"
