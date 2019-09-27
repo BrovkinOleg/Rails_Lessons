@@ -1,2 +1,4 @@
-<h2>Create New Test</h2>
-<%= render 'form', question: @question, test: @test %>
+<h2><%= t('new_test') %></h2>
+
+<%#= render 'form', question: @question, test: @test %>
+<%= render 'form', test: @test %>

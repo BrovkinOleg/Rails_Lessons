@@ -3,6 +3,7 @@ en:
     nav:
       header: "Admin panel"
       welcome: "Welcome %{name}"
+      logout: "Logout"
     tests:
       create:
         success: "Test was successfully created"
@@ -16,5 +17,8 @@ en:
         header: "The %{title} test has (%{count} questions)"
         question: "Question"
         action: "Action"
+        level: "Complexity level = %{level})"
       form:
         selector: "Select category"
+      edit:
+        edit: "Edit %{title} test"

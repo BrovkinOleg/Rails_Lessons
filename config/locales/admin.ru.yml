@@ -3,6 +3,7 @@ ru:
     nav:
       header: "Административная панель"
       welcome: "Добро пожаловать %{name}"
+      logout: "Выход"
     tests:
       create:
         success: "Тест успешно создан"
@@ -16,5 +17,8 @@ ru:
         header: "Тест %{title} содержит (вопросов %{count})"
         question: "Вопрос"
         action: "Действие"
+        level: "Уровень сложности = %{level})"
       form:
         selector: "Выберите категорию"
+      edit:
+        edit: "Редактируем %{title} тест"

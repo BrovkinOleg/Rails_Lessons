@@ -1,15 +1,15 @@
 
-<h2>Test "<%= @test.title %>" has <%= pluralize(@test.questions.count, 'question') %></h2>
-<h2>level: <%= @test.level %></h2><br>
-<h2>Questions</h2>
+<h2><%= t('.header', title: @test.title, count: @test.questions.count) %></h2>
 
-<%= link_to 'New question', new_admin_test_question_path(@test) %>
+<h2><%= t('.level', level: @test.level) %></h2><br>
+
+<%= link_to t('new_question'), new_admin_test_question_path(@test) %>
 
 <ol>
   <%= render @test.questions %>
 </ol>
 
 <tr>
-  <td><%= link_to 'Edit', edit_admin_test_path(@test) %></td>
-  <td><%= link_to 'Back', admin_tests_path %></td>
+  <td><%= link_to t('edit'), edit_admin_test_path(@test) %></td>
+  <td><%= link_to t('back'), admin_tests_path %></td>
 </tr>
