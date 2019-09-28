@@ -17,7 +17,7 @@ en:
         header: "The %{title} test has (%{count} questions)"
         question: "Question"
         action: "Action"
-        level: "Complexity level = %{level})"
+        level: "Complexity level = %{level}"
       form:
         selector: "Select category"
       edit:

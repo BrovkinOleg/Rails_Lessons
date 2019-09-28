@@ -1,4 +1,6 @@
 ru:
+  enter_the_guru_gates: "Вход в программу обучения"
+  become_a_guru: "Стань умным"
   logout: "Выйти"
   back: "Назад"
   new_test: "Создать новый тест"

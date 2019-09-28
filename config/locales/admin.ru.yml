@@ -17,7 +17,7 @@ ru:
         header: "Тест %{title} содержит (вопросов %{count})"
         question: "Вопрос"
         action: "Действие"
-        level: "Уровень сложности = %{level})"
+        level: "Уровень сложности = %{level}"
       form:
         selector: "Выберите категорию"
       edit:
