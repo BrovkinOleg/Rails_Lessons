@@ -1,4 +1,4 @@
-<p><%= flash['alert alert-info'] = t('.greeting', user: @email) %></p>
+<p><%= t('.greeting', user: @email) %></p>
 
 <% if @resource.try(:unconfirmed_email?) %>
   <p><%= t('.message', email: @resource.unconfirmed_email) %></p>

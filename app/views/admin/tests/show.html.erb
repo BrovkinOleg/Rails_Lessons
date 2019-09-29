@@ -8,6 +8,7 @@
 
     <ol><%= render @test.questions %></ol>
 
-    <h5><%= link_to t('edit'), edit_admin_test_path(@test) %></td></h5>
+    <h6><%= link_to t('edit'), edit_admin_test_path(@test) %></h6>
+    <h6><%= link_to t('back'), admin_tests_path(@test) %></h6>
   </div>
 </div>

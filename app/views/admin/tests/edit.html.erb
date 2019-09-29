@@ -2,6 +2,7 @@
   <div class="col col-md-4">
     <h3><%= t('.edit', title: @test.title) %></h3>
 
-    <%= render 'form', test: @test %><br>
+    <%= render 'form', test: @test %>
+    <h6><%= link_to t('back'), admin_test_path(@test) %></h6>
   </div>
 </div>
