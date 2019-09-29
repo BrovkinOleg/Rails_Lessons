@@ -21,14 +21,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[first_name last_name])
   end
 
-  # def after_sign_in_path_for(user)
-  #   if user.admin?
-  #     admin_tests_path
-  #   else
-  #     tests_path
-  #   end
-  # end
-
   def log_out
     session.delete(:user_id)
     @current_user = nil
