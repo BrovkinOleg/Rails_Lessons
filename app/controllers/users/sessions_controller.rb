@@ -10,7 +10,7 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    flash[:greeting] = "Welcome, #{current_user.full_name}"
+    flash['alert alert-success'] = "Welcome, #{current_user.full_name}"
     super
   end
 

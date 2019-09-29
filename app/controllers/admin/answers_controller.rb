@@ -14,7 +14,8 @@ class Admin::AnswersController < Admin::BaseController
   def create
     @answer = @question.answers.new(answer_params)
     if @answer.save
-      redirect_to [:admin, @answer], notice: 'Answer was created.'
+      flash['alert alert-info'] = 'Answer was created.'
+      redirect_to [:admin, @answer]
     else
       render :new
     end
@@ -22,7 +23,8 @@ class Admin::AnswersController < Admin::BaseController
 
   def update
     if @answer.update(answer_params)
-      redirect_to [:admin, @answer], notice: 'Answer was updated.'
+      flash['alert alert-info'] = 'Answer was updated.'
+      redirect_to [:admin, @answer]
     else
       render :edit
     end

@@ -1,11 +1,11 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<h2><%= t('.header', title: @test_passage.test.title) %></h2>
 
 <div>
   <% if @test_passage.success? %>
-    <h2 id="passed">You answered <%= @test_passage.result %>% questions.
+    <h2 id="passed" class="alert alert-success">You answered <%= @test_passage.result %>% questions.
         Test successfully passed!</h2>
   <% else %>
-    <h2 id="failed">You answered <%= @test_passage.result %>% questions.
+    <h2 id="failed" class="alert alert-danger">You answered <%= @test_passage.result %>% questions.
         Test failed!</h2>
   <% end %>
 </div>
@@ -14,7 +14,3 @@
   <li>Correct answers: <%= @test_passage.correct_questions %></li>
   <li>Number of questions: <%= @test_passage.questions_number %></li>
 </ul>
-
-<div>
-  <%= link_to t('.all_tests'), tests_path %>
-</div>
