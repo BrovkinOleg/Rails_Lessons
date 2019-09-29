@@ -1,10 +1,10 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-4">
-    <h4 class="text-info"><%= t('.header', title: @test.title, count: @test.questions.count) %></h4>
+    <h4><%= t('.header', title: @test.title, count: @test.questions.count) %></h4>
 
-    <h4 class="text-info"><%= t('.level', level: @test.level) %></h4><br>
+    <h4><%= t('.level', level: @test.level) %></h4><br>
 
-    <h5><%= link_to t('new_question'), new_admin_test_question_path(@test) %></h5>
+    <h4><%= link_to t('new_question'), new_admin_test_question_path(@test) %></h4>
 
     <ol><%= render @test.questions %></ol>
 

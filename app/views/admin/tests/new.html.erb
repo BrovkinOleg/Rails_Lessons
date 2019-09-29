@@ -1,8 +1,9 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-4">
-    <h2><%= t('new_test') %></h2>
+    <h3><%= t('new_test') %></h3>
 
     <%#= render 'form', question: @question, test: @test %>
     <%= render 'form', test: @test %>
+    <h6><%= link_to t('back'), admin_tests_path(@test) %></h6>
   </div>
 </div>

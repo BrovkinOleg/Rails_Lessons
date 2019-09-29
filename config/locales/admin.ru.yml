@@ -14,7 +14,7 @@ ru:
         questions: "Вопросы"
         action: "Действие"
       show:
-        header: "Тест %{title} содержит (вопросов %{count})"
+        header: "Тест '%{title}'"
         question: "Вопрос"
         action: "Действие"
         level: "Уровень сложности = %{level}"

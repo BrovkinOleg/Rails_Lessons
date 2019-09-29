@@ -14,7 +14,7 @@ en:
         questions: "Questions"
         action: "Action"
       show:
-        header: "The %{title} test has (%{count} questions)"
+        header: "The '%{title}' test"
         question: "Question"
         action: "Action"
         level: "Complexity level = %{level}"

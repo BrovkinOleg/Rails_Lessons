@@ -33,8 +33,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def destroy
     @question.destroy
-    flash['alert alert-info'] = 'Question was destroyed'
-    redirect_to [:admin, @question.test]
+    redirect_to [:admin, @question.test], alert: 'Question was destroyed'
   end
 
   private
