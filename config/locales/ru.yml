@@ -46,6 +46,9 @@ ru:
     result:
       header: "Тест '%{title}' завершен!"
       all_tests: "Все тесты"
+    gist:
+      success: "Gist успешно сохранен"
+      failure: "Во время сохранения gist произошла ошибка"
 
   shared:
     errors:
