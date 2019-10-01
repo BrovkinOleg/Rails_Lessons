@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise', '~> 4.0'
 
+# NETWORKING
+gem 'faraday'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 # box 13.09.2019
