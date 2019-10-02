@@ -27,16 +27,13 @@ class TestPassagesController < ApplicationController
                     else
                       { alert: t('.failure') }
                     end
-
     redirect_to @test_passage, flash_options
   end
 
   private
 
   def create_gist!(url)
-    # current_user.gists.create!(
-    #     question: @test_passage.current_question,
-    #     url: url)
+    current_user.gists.create!(question: @test_passage.current_question, url: url)
   end
 
   def set_test_passage
