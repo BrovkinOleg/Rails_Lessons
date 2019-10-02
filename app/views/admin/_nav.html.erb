@@ -5,7 +5,8 @@
   <span class="text-info">AdminPanel</span>
 
   <div class="nav-admin user">
-    <%= t('.welcome', name: current_user.full_name)%>, <b class="nav-pills"></b> |
+    <b class="nav-pills"><%= t('.welcome', name: current_user.full_name)%></b> |
+    <%= link_to t('.admin_gists'), admin_gists_path %> |
     <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
   </div>
 </nav>

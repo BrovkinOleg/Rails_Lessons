@@ -11,6 +11,10 @@ ru:
   sign_up: "Зарегистрироваться"
   sign_in: "Войти"
 
+  admin:
+    nav:
+      admin_gists: "Все Gists"
+
   devise:
     failure:
       user:

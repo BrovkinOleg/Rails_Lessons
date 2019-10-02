@@ -11,6 +11,10 @@ en:
   sign_up: "sign up"
   sign_in: "login"
 
+  admin:
+    nav:
+      admin_gists: "All Gists"
+
   devise:
     failure:
       user:
