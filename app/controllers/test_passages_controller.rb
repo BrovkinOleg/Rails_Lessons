@@ -19,11 +19,11 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    result = GistQuestionService.new(@test_passage.current_question).call
-    if result.html_url
-      create_gist!(result.html_url)
-      gist_site = result.html_url
-      flash_options = { notice: t('.success', link: "<a href=#{gist_site} target='_blank'>GIST</a>") }
+    gist_site = GistQuestionService.new(@test_passage.current_question).call
+    gist_hash = gist_site.split('/')[-1]
+    if gist_site
+      create_gist!(gist_site)
+      flash_options = { notice: t('.success', link: "<a href=#{gist_site} target='_blank'>#{gist_hash}</a>") }
     else
       flash_options = { alert: t('.failure') }
     end

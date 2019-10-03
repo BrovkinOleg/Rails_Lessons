@@ -8,9 +8,14 @@ class GistQuestionService
 
   def call
     @client.create_gist(gist_params)
+    gist_url
   end
 
   private
+
+  def gist_url
+    @client.last_response.data[:html_url]
+  end
 
   def default_client
     @client = nil
