@@ -51,7 +51,7 @@ en:
       header: "The '%{title}' test was completed!"
       all_tests: "All tests"
     gist:
-      success: "Gist was successfully created"
+      success: "Gist was successfully created %{link}"
       failure: "An error occurred while saving gist"
 
   shared:
