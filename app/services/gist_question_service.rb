@@ -7,15 +7,22 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params)
+    @new_gist = @client.create_gist(gist_params)
+  end
+
+  def success?
     gist_url
   end
 
-  private
+  def hash
+    gist_url.split('/')[-1]
+  end
 
   def gist_url
     @client.last_response.data[:html_url]
   end
+
+  private
 
   def default_client
     @client = nil
