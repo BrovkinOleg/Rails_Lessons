@@ -11,13 +11,16 @@ function comparePassword()
   var pass1 = document.getElementById("user_password");
   var pass2 = document.getElementById("user_password_confirmation");
 
-  var goodColor = "#00FF00";
-  var badColor = "#FF0000";
-
-  if (pass2.value === '')
-    pass2.style.backgroundColor = '';
-  else if (pass1.value === pass2.value)
-    pass2.style.backgroundColor = goodColor;
-  else
-    pass2.style.backgroundColor = badColor;
+  if (pass2.value === '') {
+    pass2.classList.remove('red_bg');
+    pass2.classList.remove('green_bg');
+  }
+  else if (pass1.value === pass2.value) {
+    pass2.classList.remove('red_bg');
+    pass2.classList.add('green_bg');
+  }
+  else {
+    pass2.classList.remove('green_bg');
+    pass2.classList.add('red_bg');
+  }
 }
