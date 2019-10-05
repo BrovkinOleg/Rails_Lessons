@@ -22,3 +22,5 @@ ru:
         selector: "Выберите категорию"
       edit:
         edit: "Редактируем %{title} тест"
+      form_inline:
+        submit: "OK"

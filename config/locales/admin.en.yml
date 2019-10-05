@@ -22,3 +22,5 @@ en:
         selector: "Select category"
       edit:
         edit: "Edit %{title} test"
+      form_inline:
+        submit: "OK"

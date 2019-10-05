@@ -1,9 +1,9 @@
-<% if resource.errors.present? %>
+<% if resources.errors.any?  && resources.present? %>
   <div>
-    <h2><%= t('.header', count: resource.errors.count) %></h2>
+    <h2><%= t('.header', count: resources.errors.count) %></h2>
 
     <ul>
-      <% resource.errors.full_messages.each do |message| %>
+      <% resources.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
