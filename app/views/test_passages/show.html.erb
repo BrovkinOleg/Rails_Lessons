@@ -1,5 +1,10 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-4">
+
+    <%= content_tag :progress, id: 'progressbar', class: 'progress-bar', max: 100,
+                    data: { question_number: @test_passage.current_question_number,
+                    count_of_questions: @test_passage.questions_number } do; end%>
+
     <h2 class="text-info">Passing the "<%= @test_passage.test.title %>" Test</h2>
     <h4> Choose answer for question "<%= @test_passage.current_question.body %>"</h4>
     <h4> Question number <%= @test_passage.current_question_number %> of <%= @test_passage.questions_number %></h4>
@@ -13,7 +18,7 @@
         </p>
       <% end %>
       <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
-      <p><%= form.submit 'Next', class: 'btn btn-primary' %></p>
+      <p><%= form.submit 'Next', class: 'btn btn-primary ' %></p>
     <% end %>
   </div>
 </div>
