@@ -1,4 +1,4 @@
-<% if resources.errors.any?  && resources.present? %>
+<% if resources.present? && resources.errors.any? %>
   <div>
     <h2><%= t('.header', count: resources.errors.count) %></h2>
 
