@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_191_002_044_822) do
+ActiveRecord::Schema.define(version: 20_191_006_165_939) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension 'plpgsql'
+
   create_table 'answers', force: :cascade do |t|
     t.string 'body', null: false
     t.boolean 'correct', default: false
@@ -65,6 +68,7 @@ ActiveRecord::Schema.define(version: 20_191_002_044_822) do
     t.integer 'admin_id'
     t.index ['admin_id'], name: 'index_tests_on_admin_id'
     t.index ['category_id'], name: 'index_tests_on_category_id'
+    t.index %w[title level], name: 'index_tests_on_title_and_level', unique: true
   end
 
   create_table 'users', force: :cascade do |t|
