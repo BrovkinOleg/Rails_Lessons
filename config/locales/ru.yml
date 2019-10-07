@@ -18,6 +18,11 @@ ru:
   feedbacks:
     new:
       header: "Отправить"
+    form:
+      send_email: "Послать Почту"
+    create:
+      success: 'Отправлено успешно'
+      failed: 'Ошибка'
 
   admin:
     nav:

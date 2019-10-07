@@ -18,6 +18,11 @@ en:
   feedbacks:
     new:
       header: "Send"
+    form:
+      send_email: "Send email"
+    create:
+      success: 'Successfully sent'
+      failed: 'Failed'
 
   admin:
     nav:
