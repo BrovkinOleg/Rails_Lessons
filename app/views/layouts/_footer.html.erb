@@ -2,10 +2,9 @@
   <div class="row justify-content-center mt-3">
     <div class="col col-md-4">
       <p><%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'http://thinknetica.com', target: :blank %></p>
-      <p>
-        Brovkin Oleg <%= github_url('BrovkinOleg', 'Rails_Lessons') %>
-        <br><%= current_year %>
-      </p>
+      <p><%= link_to t('.feedback'), new_feedback_path %></p>
+      <p><%= current_year %></p>
+      <p>Brovkin Oleg <%= github_url('BrovkinOleg', 'Rails_Lessons') %></p>
     </div>
   </div>
 </footer>

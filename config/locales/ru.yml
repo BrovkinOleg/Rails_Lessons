@@ -11,6 +11,14 @@ ru:
   sign_up: "Зарегистрироваться"
   sign_in: "Войти"
 
+  layouts:
+    footer:
+      feedback: "Обратная связь"
+
+  feedbacks:
+    new:
+      header: "Отправить"
+
   admin:
     nav:
       admin_gists: "Все Gists"

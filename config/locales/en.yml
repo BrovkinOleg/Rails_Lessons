@@ -11,6 +11,14 @@ en:
   sign_up: "sign up"
   sign_in: "login"
 
+  layouts:
+    footer:
+      feedback: "Feed Back"
+
+  feedbacks:
+    new:
+      header: "Send"
+
   admin:
     nav:
       admin_gists: "All Gists"
