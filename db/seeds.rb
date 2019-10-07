@@ -12,7 +12,7 @@ categories = Category.create!([{ title: 'rails' }, { title: 'html' }, { title: '
 
 admins = User.create!([
                         { first_name: 'Admin', last_name: 'Admin', email: 'dmlboxline@kaluga.ru', password: 'qqqqqq' },
-                        { first_name: 'Jack', last_name: 'Black', email: 'a@a.a', password: 'aaaaaa' }
+                        { first_name: 'Jack', last_name: 'Black', email: 'a@a.a', password: 'qqqqqq' }
                       ])
 
 tests = Test.create!([
