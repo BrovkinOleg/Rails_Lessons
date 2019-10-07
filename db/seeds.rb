@@ -10,16 +10,14 @@ Category.delete_all
 
 categories = Category.create!([{ title: 'rails' }, { title: 'html' }, { title: 'java' }])
 
-admins = User.create!([{ first_name: 'Admin', last_name: 'Admin', email: 'a@a.a',
-                         password: 'qqqqqq', type: 'Admin' }])
-
-users = User.create!([
-                       { first_name: 'Jack', last_name: 'Black', email: 'b@a.a', password: 'aaaaaa' }
-                     ])
+admins = User.create!([
+                        { first_name: 'Admin', last_name: 'Admin', email: 'dmlboxline@kaluga.ru', password: 'qqqqqq' },
+                        { first_name: 'Jack', last_name: 'Black', email: 'a@a.a', password: 'aaaaaa' }
+                      ])
 
 tests = Test.create!([
-                       { title: 'Rails', level: 0, category: categories[0], admin: admins[0] },
-                       { title: 'JAVA', level: 0, category: categories[2], admin: admins[0] }
+                       { title: 'Rails', level: 1, category: categories[0], admin: admins[0] },
+                       { title: 'JAVA', level: 2, category: categories[2], admin: admins[0] }
                      ])
 
 questions = Question.create!([
