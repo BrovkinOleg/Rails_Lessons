@@ -38,3 +38,4 @@ yarn-debug.log*
 .yarn-integrity
 
 # ignore .env file with token
+.env
