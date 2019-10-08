@@ -5,6 +5,11 @@
         <%= render 'shared/errors', resources: feedback %>
 
         <p>
+          <%= form.label :email %><br />
+          <%= form.email_field :email, class: 'form-control' %>
+        </p>
+
+        <p>
           <%= form.label :title %>
           <%= form.text_field :title, class: 'form-control'  %>
         </p>

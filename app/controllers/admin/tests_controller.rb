@@ -17,6 +17,7 @@ class Admin::TestsController < Admin::BaseController
 
   def create
     @test = current_user.tests.new(test_params)
+    @test.admin_id = current_user.id
 
     if @test.save
       redirect_to admin_tests_path(@test), success: t('.success')
