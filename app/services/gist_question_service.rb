@@ -25,7 +25,8 @@ class GistQuestionService
   private
 
   def default_client
-    @client = Octokit::Client.new(access_token: ENV['GISTS_TOKEN'])
+    @client = Octokit::Client.new(login: 'boxline@yandex.ru', password: 'BrovkinOleg1961')
+    # @client = Octokit::Client.new(access_token: ENV['GISTS_TOKEN'])
   end
 
   def gist_params
