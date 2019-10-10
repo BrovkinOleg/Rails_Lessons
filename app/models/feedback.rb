@@ -1,5 +1,12 @@
-class Feedback < ApplicationRecord
-  belongs_to :user
+# class Feedback < ApplicationRecord
+class Feedback
+  include ActiveModel::Validations
+  include ActiveModel::Model
 
-  validates :title, :body, presence: true
+  attr_accessor :title, :body, :email
+  validates :title, :body, :email, presence: true
+
+  def id
+    @messages
+  end
 end

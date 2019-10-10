@@ -29,15 +29,6 @@ ActiveRecord::Schema.define(version: 20_191_007_124_934) do
     t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table 'feedbacks', force: :cascade do |t|
-    t.string 'title', null: false
-    t.text 'body', null: false
-    t.bigint 'user_id'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-    t.index ['user_id'], name: 'index_feedbacks_on_user_id'
-  end
-
   create_table 'gists', force: :cascade do |t|
     t.integer 'question_id'
     t.string 'url'
@@ -107,7 +98,6 @@ ActiveRecord::Schema.define(version: 20_191_007_124_934) do
   end
 
   add_foreign_key 'answers', 'questions'
-  add_foreign_key 'feedbacks', 'users'
   add_foreign_key 'gists', 'questions'
   add_foreign_key 'gists', 'users'
   add_foreign_key 'questions', 'tests'

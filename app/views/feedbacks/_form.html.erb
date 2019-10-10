@@ -1,8 +1,8 @@
 <div class="row justify-content-center">
   <div class="col col-md-4">
-    <%= form_with model: feedback, local: true do |form| %>
+    <%= form_with model: @feedback, url: feedbacks_path, local: true do |form| %>
       <div class="form-group">
-        <%= render 'shared/errors', resources: feedback %>
+        <%= render 'shared/errors', resources: @feedback %>
 
         <p>
           <%= form.label :email %><br />

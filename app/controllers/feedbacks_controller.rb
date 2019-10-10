@@ -1,14 +1,12 @@
 class FeedbacksController < ApplicationController
-  # before_action :authenticate_user!
-
   def new
-    @feedback = Feedback.new
+    @feedback = Feedback.new(title: 'your topic', body: 'your question', email: 'test@guru.com')
   end
 
   def create
-    @feedback = current_user.feedbacks.new(feedback_params)
+    @feedback = Feedback.new(feedback_params)
 
-    if @feedback.save
+    if @feedback.valid?
       FeedbackMailer.send_feedback(@feedback).deliver_now
       redirect_to root_path, alert: t('.success')
     else
@@ -19,6 +17,6 @@ class FeedbacksController < ApplicationController
   private
 
   def feedback_params
-    params.require(:feedback).permit(:title, :body)
+    params.require(:feedback).permit(:title, :body, :email)
   end
 end
