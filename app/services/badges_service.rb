@@ -19,7 +19,7 @@ class BadgesService
   end
 
   def successful_test?
-    @test_passage.successfully?
+    @test_passage.success?
   end
 
   def category_complete?(category)

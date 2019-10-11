@@ -1,6 +1,13 @@
 en:
   admin:
+    badges:
+      badge:
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+
     nav:
+      admin_gists: "All Gists"
       header: "Admin panel"
       welcome: "Welcome %{name}"
       logout: "Logout"

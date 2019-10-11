@@ -1,0 +1,17 @@
+<div class="row justify-content-center mt-3 ">
+  <div class="col col-md-4">
+
+    <h3>Achievements</h3>
+
+    <table class="table table-striped">
+      <%= render partial: 'badges/form', collection: @current_badges %>
+    </table>
+
+    <h3>All_badges</h3>
+
+    <table class="table table-striped">
+      <%= render partial: 'badges/form', collection: @badges %>
+    </table>
+
+  </div>
+</div>

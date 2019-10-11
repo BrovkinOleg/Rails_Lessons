@@ -11,6 +11,11 @@ en:
   sign_up: "sign up"
   sign_in: "login"
 
+  badges:
+    index:
+      achievements: "Achievements"
+      all_badges: "All badges"
+
   layouts:
     footer:
       feedback: "Feed Back"
@@ -23,10 +28,6 @@ en:
     create:
       success: 'Successfully sent'
       failed: 'Failed'
-
-  admin:
-    nav:
-      admin_gists: "All Gists"
 
   devise:
     failure:

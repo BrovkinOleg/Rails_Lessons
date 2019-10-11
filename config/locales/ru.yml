@@ -11,6 +11,11 @@ ru:
   sign_up: "Зарегистрироваться"
   sign_in: "Войти"
 
+  badges:
+    index:
+      achievements: "Достижения"
+      all_badges: "Все значки"
+
   layouts:
     footer:
       feedback: "Обратная связь"
@@ -23,10 +28,6 @@ ru:
     create:
       success: 'Отправлено успешно'
       failed: 'Ошибка'
-
-  admin:
-    nav:
-      admin_gists: "Все Gists"
 
   devise:
     failure:
