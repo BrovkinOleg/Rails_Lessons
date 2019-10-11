@@ -5,6 +5,14 @@ en:
         edit: "Edit"
         delete: "Delete"
         sure: "Are you sure?"
+      edit:
+        edit_achiv: "Edit badge"
+      index:
+        achievements: "Achievements"
+        add_achiv: "Add badge"
+      new:
+        new_achiv: "New badge"
+        back_to_tests: "Back"
 
     nav:
       admin_gists: "All Gists"

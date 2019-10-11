@@ -5,6 +5,14 @@ ru:
         edit: "Изменить"
         delete: "Удалить"
         sure: "Вы уверены?"
+      edit:
+        edit_achiv: "Редактировать значок"
+      index:
+        achievements: "Достижения"
+        add_achiv: "Добавить значок"
+      new:
+        new_achiv: "Новый значок"
+        back_to_tests: "Назад"
 
     nav:
       admin_gists: "Все Gists"
