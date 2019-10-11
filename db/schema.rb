@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_191_011_070_405) do
+ActiveRecord::Schema.define(version: 20_191_011_090_213) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(version: 20_191_011_070_405) do
     t.datetime 'updated_at', precision: 6, null: false
     t.integer 'question_id'
     t.index ['question_id'], name: 'index_answers_on_question_id'
+  end
+
+  create_table 'badges', force: :cascade do |t|
+    t.string 'title', null: false
+    t.string 'rule'
+    t.string 'image', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
   create_table 'categories', force: :cascade do |t|
@@ -100,11 +108,8 @@ ActiveRecord::Schema.define(version: 20_191_011_070_405) do
   create_table 'users_badges', force: :cascade do |t|
     t.integer 'user_id'
     t.integer 'badge_id'
-    t.integer 'image_id'
-    t.string 'name'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
-    t.index ['badge_id'], name: 'index_users_badges_on_badge_id'
     t.index ['user_id'], name: 'index_users_badges_on_user_id'
   end
 
