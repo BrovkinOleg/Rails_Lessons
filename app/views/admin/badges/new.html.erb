@@ -1,9 +1,12 @@
-<div class="col-md-6 col-md-offset-3">
-  <div class="new-book-form">
+<div class="row justify-content-center mt-3">
 
-    <h1 align="center"><%= t('.new_achiv') %></h1>
+  <div class="col-md-4 col-md-offset-3">
+    <div class="new-book-form">
 
-    <%= render 'form' %>
-    <%= link_to t('.back_to_tests'), admin_tests_path, class: 'btn btn-custom' %>
+      <h2><%= t('.new_badge') %></h2>
+
+      <%= render 'form' %>
+      <%= link_to t('.back_to_tests'), admin_tests_path %>
+    </div>
   </div>
 </div>

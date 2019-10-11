@@ -9,12 +9,13 @@ ru:
         edit_achiv: "Редактировать значок"
       index:
         achievements: "Достижения"
-        add_achiv: "Добавить значок"
+        add_badge: "Добавить значок"
       new:
-        new_achiv: "Новый значок"
+        new_badge: "Новый значок"
         back_to_tests: "Назад"
 
     nav:
+      achievements: "Награды"
       admin_gists: "Все Gists"
       header: "Административная панель"
       welcome: "Добро пожаловать %{name}"

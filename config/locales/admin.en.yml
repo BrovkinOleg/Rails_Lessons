@@ -9,12 +9,13 @@ en:
         edit_achiv: "Edit badge"
       index:
         achievements: "Achievements"
-        add_achiv: "Add badge"
+        add_badge: "Add badge"
       new:
-        new_achiv: "New badge"
+        new_badge: "New badge"
         back_to_tests: "Back"
 
     nav:
+      achievements: "Badges"
       admin_gists: "All Gists"
       header: "Admin panel"
       welcome: "Welcome %{name}"
