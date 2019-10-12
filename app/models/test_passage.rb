@@ -8,12 +8,13 @@ class TestPassage < ApplicationRecord
 
   before_validation :set_current_question
 
-  def result
+  def passage_result
     (correct_questions.to_f * 100) / questions_number
   end
 
   def success?
-    result >= CORRECT_ANSWERS_PERCENT
+    check = passage_result >= CORRECT_ANSWERS_PERCENT
+    self.success = check ? true : false
   end
 
   def completed?
