@@ -6,16 +6,16 @@ ru:
         delete: "Удалить"
         sure: "Вы уверены?"
       edit:
-        edit_achiv: "Редактировать значок"
+        edit_achiv: "Редактировать badge"
       index:
-        achievements: "Достижения"
-        add_badge: "Добавить значок"
+        achievements: "Призы"
+        add_badge: "Добавить badge"
       new:
-        new_badge: "Новый значок"
+        new_badge: "Новый badge"
         back_to_tests: "Назад"
 
     nav:
-      achievements: "Награды"
+      achievements: "Призы"
       admin_gists: "Все Gists"
       header: "Административная панель"
       welcome: "Добро пожаловать %{name}"

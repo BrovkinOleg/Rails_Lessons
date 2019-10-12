@@ -1,10 +1,9 @@
 class Badge < ApplicationRecord
-  BADGES_AWARD =
-    {
-      category_complete: 'Passing all tests of the category',
-      first_try: 'Passing the test on the first try',
-      level_complete: 'Passing all tests of a certain level'
-    }.freeze
+  RULES = [
+    ['Passing all tests of the category', 1],
+    ['Passing one test on the first step', 2],
+    ['Passing all tests of a certain level', 3]
+  ].freeze
 
   has_many :users_badges
   has_many :users, through: :users_badges
@@ -13,6 +12,8 @@ class Badge < ApplicationRecord
   def self.images
     images_path = 'app/assets/images/'
     badges = Dir.glob("#{images_path}badges/*")
-    badges.map { |badge_path| badge_path.gsub(images_path, '') }
+    badges.map do |badge_path|
+      badge_path.gsub(images_path, '')
+    end
   end
 end

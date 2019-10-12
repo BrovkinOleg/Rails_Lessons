@@ -11,6 +11,7 @@ class Admin::BadgesController < Admin::BaseController
 
   def create
     @badge = Badge.new(badge_params)
+
     if @badge.save
       flash[:success] = 'Badge was successfully created.'
       redirect_to admin_badges_path

@@ -14,7 +14,7 @@ ru:
   badges:
     index:
       achievements: "Достижения"
-      all_badges: "Все значки"
+      all_badges: "Все проверки"
 
   layouts:
     footer:

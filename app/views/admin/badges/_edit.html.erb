@@ -6,17 +6,16 @@
       <%= form.label :title %>
       <%= form.text_field :title %>
     </p>
-
     <p>
       <%= form.label :image %>
-      <%= form.select :image, options_for_select(Badge.images, selected: Badge.images[1]) %>
+      <%= form.select :image, options_for_select(Badge.images, selected: @badge.image) %>
     </p>
 
     <p>
       <%= form.label :rule %>
-      <%= form.select :rule, options_for_select(Badge::RULES) %>
+      <% rule = Badge::RULES[@badge.rule-1] %>
+      <%= form.select :rule, options_for_select(Badge::RULES, selected: rule) %>
     </p>
-
     <p><%= form.submit %></p>
   </div>
 <% end %>

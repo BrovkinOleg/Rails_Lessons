@@ -15,7 +15,7 @@ en:
         back_to_tests: "Back"
 
     nav:
-      achievements: "Badges"
+      achievements: "Achievements"
       admin_gists: "All Gists"
       header: "Admin panel"
       welcome: "Welcome %{name}"
