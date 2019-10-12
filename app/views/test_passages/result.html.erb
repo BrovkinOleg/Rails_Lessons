@@ -2,10 +2,10 @@
 
 <div>
   <% if @test_passage.success? %>
-    <h2 id="passed" class="alert alert-success">You answered <%= @test_passage.result %>% questions.
+    <h2 id="passed" class="alert alert-success">You answered <%= @test_passage.passage_result %>% questions.
         Test successfully passed!</h2>
   <% else %>
-    <h2 id="failed" class="alert alert-danger">You answered <%= @test_passage.result %>% questions.
+    <h2 id="failed" class="alert alert-danger">You answered <%= @test_passage.passage_result %>% questions.
         Test failed!</h2>
   <% end %>
 </div>

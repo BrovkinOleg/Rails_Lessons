@@ -13,8 +13,13 @@ ru:
 
   badges:
     index:
-      achievements: "Достижения"
-      all_badges: "Все проверки"
+      achievements: "Ваши badges"
+      all_badges: "Все badges"
+  views:
+    badges:
+      index:
+        achievements: "Ваши badges"
+        all_badges: "Все badges"
 
   layouts:
     footer:

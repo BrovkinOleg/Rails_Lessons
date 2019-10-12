@@ -15,6 +15,7 @@ class TestPassage < ApplicationRecord
   def success?
     check = passage_result >= CORRECT_ANSWERS_PERCENT
     self.success = check ? true : false
+    save!
   end
 
   def completed?

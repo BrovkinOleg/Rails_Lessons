@@ -7,29 +7,38 @@ class BadgesService
   end
 
   def call
-    @all_user_tests_passages = @test_passage.where(user_id: @user.id)
-    Badge.all.each do |b|
-      reward(badge) if b.rule == 1 && all_tests_of_the_category_finished?
-      reward(badge) if b.rule == 2 && first_try?
-      reward(badge) if b.rule == 3 && all_tests_of_certain_level_finished?
-    end
+    reward(Badge.first)
+    # @user_passages = TestPassage.where(user_id: @user.id, success: true)
+    # return if @user_passages.nil?
+    # byebug
+    # category_tests_finished? unless Badge.where(rule: 1).nil?
+    # first_try? unless Badge.where(rule: 2).nil?
+    # level_tests_finished? unless Badge.where(rule: 3).nil?
+    # Badge.all.each do |b|
+    #   reward(badge) if b.rule == 1 && category_tests_finished?
+    #   reward(badge) if b.rule == 2 && first_try?
+    #   reward(badge) if b.rule == 3 && level_tests_finished?
+    # end
   end
 
   private
 
-  def all_tests_of_certain_level_finished?
-    # level_tests = Test.where(level: @test.level).count
-    # user_level_tests_finished = TestPassage.where(user_id: @user.id, level: @test.category_id).count
-  end
-
-  def all_tests_of_the_category_finished?
-    category_tests_count = Test.where(category_id: @test.category_id).count
-    # user_category_tests_finished = TestPassage.where(user_id: @user.id). category_id: @test.category_id).count
-    category_tests_count == user_category_tests_finished && successful_test?
+  def category_tests_finished?
+    # byebug
+    category_tests_count = Test.where(category_id: @user.test.category_id).count
+    user_category_tests_finished = @user_passages.where(category_id: @user.test.category_id).count
+    reward(Badge.where(rule: 1)) if user_category_tests_finished >= category_tests_count && successful_test?
   end
 
   def first_try?
-    successful_test? && @user.tests.where(id: @test.id).count == 1
+    # @user.tests.where(id: @test.id).count == 1 && successful_test?
+    reward(Badge.where(rule: 2)) if @user_passages.tests.count == 1 && successful_test?
+  end
+
+  def level_tests_finished?
+    level_tests = Test.where(level: @test.level).count
+    user_level_tests_finished = @user_passages.test.where(level: @test.level).count
+    reward(Badge.where(rule: 3)) if user_level_tests_finished >= level_tests && successful_test?
   end
 
   def reward(badge)
@@ -37,7 +46,7 @@ class BadgesService
   end
 
   def successful_test?
-    @test_passage.success?
+    @test_passage.success
   end
 
   def category_complete?(category)

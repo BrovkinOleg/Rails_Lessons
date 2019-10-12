@@ -13,8 +13,14 @@ en:
 
   badges:
     index:
-      achievements: "Achievements"
+      achievements: "Your badges"
       all_badges: "All badges"
+
+  views:
+    badges:
+      index:
+        achievements: "Your badges"
+        all_badges: "All badges"
 
   layouts:
     footer:
