@@ -2,7 +2,6 @@
 
 # You must delete tables in back order due to FOREIGN KEY
 UsersBadge.delete_all
-TestPassage.delete_all
 Gist.delete_all
 Answer.delete_all
 TestPassage.delete_all
