@@ -43,4 +43,3 @@ answer_array = []
   answer_array << { body: "answer_#{id}:3", correct: false, question: questions[id] }
 end
 Answer.create!(answer_array)
-

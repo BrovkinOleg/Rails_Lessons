@@ -4,18 +4,19 @@
 
     <p>
       <%= form.label :title %>
-      <%= form.text_field :title %>
+      <%= form.select :title, options_for_select(Badge::RULES_NAME, selected: @badge.title) %>
+    </p>
+    <p>
+      <%= form.label :rule %>
+      <%= form.text_field :rule, default: @badge.rule %>
+      <%#= form. :rule, selected: @badges.rule %>
     </p>
     <p>
       <%= form.label :image %>
       <%= form.select :image, options_for_select(Badge.images, selected: @badge.image) %>
     </p>
 
-    <p>
-      <%= form.label :rule %>
-      <% rule = Badge::RULES[@badge.rule-1] %>
-      <%= form.select :rule, options_for_select(Badge::RULES, selected: rule) %>
-    </p>
+
     <p><%= form.submit %></p>
   </div>
 <% end %>

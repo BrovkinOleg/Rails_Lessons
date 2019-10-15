@@ -1,9 +1,6 @@
 class Badge < ApplicationRecord
-  RULES = [
-    ['Passing all tests of the category', 1],
-    ['Passing one test on the first step', 2],
-    ['Passing all tests of a certain level', 3]
-  ].freeze
+
+  RULES_NAME = %w[success_category success_on_first_try success_all_level].freeze
 
   has_many :users_badges
   has_many :users, through: :users_badges
