@@ -1,8 +1,9 @@
 <div class="row justify-content-center mt-3 ">
-  <div class="col col-md-4">
+  <div class="col col-md-6">
     <h3><%= t('.achievements') %></h3>
 
-    <table class="table table-hover">
+<!--    <table class="table table-hover">-->
+    <table class="table-striped">
       <%= render partial: 'admin/badges/badge', collection: @badges %>
     </table>
 

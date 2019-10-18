@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # You must delete tables in back order due to FOREIGN KEY
+Badge.delete_all
 UsersBadge.delete_all
 Gist.delete_all
 Answer.delete_all
@@ -11,6 +12,15 @@ User.delete_all
 Category.delete_all
 
 name = %w[Rails HTML JAVA]
+images_path = 'badges/Badge_'
+badge_title = ['Success pass all tests for the category',
+               'Success pass for the first attempt',
+               'Success pass all tests for the level']
+badges = Badge.create!([
+                         { title: badge_title[0], rule: Badge::RULES_NAME[0], rule_param: 'Rails', image: images_path + '01.png' },
+                         { title: badge_title[1], rule: Badge::RULES_NAME[1], rule_param: 'no_param', image: images_path + '02.png' },
+                         { title: badge_title[2], rule: Badge::RULES_NAME[2], rule_param: '1', image: images_path + '03.png' }
+                       ])
 
 categories = Category.create!([{ title: name[0] }, { title: name[1] }, { title: name[2] }])
 
@@ -20,11 +30,15 @@ admins = User.create!([
                       ])
 
 tests_array = []
-(0..2).each do |id|
-  tests_array << { title: name[id], level: 1, category: categories[id], admin: admins[0] }
-  tests_array << { title: name[id], level: 2, category: categories[id], admin: admins[0] }
-  tests_array << { title: name[id], level: 3, category: categories[id], admin: admins[0] }
-end
+tests_array << { title: 'Rails basis', level: 1, category: categories[0], admin: admins[0] }
+tests_array << { title: 'Rails Associations', level: 2, category: categories[0], admin: admins[0] }
+tests_array << { title: 'Validations in Rails', level: 3, category: categories[0], admin: admins[0] }
+tests_array << { title: 'HTML basis', level: 1, category: categories[1], admin: admins[0] }
+tests_array << { title: 'HTML tags', level: 2, category: categories[1], admin: admins[0] }
+tests_array << { title: 'HTML and CSS', level: 3, category: categories[1], admin: admins[0] }
+tests_array << { title: 'JAVA basis', level: 1, category: categories[2], admin: admins[0] }
+tests_array << { title: 'JAVA functions', level: 2, category: categories[2], admin: admins[0] }
+tests_array << { title: 'JAVA and HTML', level: 3, category: categories[2], admin: admins[0] }
 tests = Test.create!(tests_array)
 
 questions_array = []

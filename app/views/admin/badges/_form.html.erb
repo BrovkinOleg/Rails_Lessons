@@ -3,11 +3,11 @@
     <%= render 'shared/errors', resources: @badge %>
     <p>
       <%= form.label :title %>
-      <%= form.select(:title, options_for_select(Badge::RULES_NAME), {}) %>
+      <%= form.text_field :title %>
     </p>
     <p>
       <%= form.label :rule %>
-      <%= form.text_field :rule %>
+      <%= form.select(:rule, options_for_select(Badge::RULES_NAME), {}) %>
     </p>
     <p>
       <%= form.label :image %>

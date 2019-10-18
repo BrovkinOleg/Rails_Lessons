@@ -1,7 +1,9 @@
+
+<!--<tr><td class="align-middle"><%#= badge.title %></td></tr>-->
+<tr><th><%= badge.title %></th></tr>
 <tr>
-  <td class="align-middle col-md-3"><%= image_tag badge.image, size: "40x40" %></td>
-  <td class="align-middle"><%= badge.title %></td>
-  <td class="align-middle col-md-1">
+  <td class="col-md-2"><%= image_tag badge.image, size: "40x40" %></td>
+  <td class="align-middle col-md-2">
     <div class="btn-group btn-group-sm">
       <%= link_to t('.edit'), edit_admin_badge_path(badge),
                   class: 'btn btn-outline-secondary'  %>
