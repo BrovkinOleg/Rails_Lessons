@@ -15,11 +15,10 @@ ru:
     index:
       achievements: "Ваши badges"
       all_badges: "Все badges"
-  views:
-    badges:
-      index:
-        achievements: "Ваши badges"
-        all_badges: "Все badges"
+    badge:
+      text1: "Badge за все тесты выбранной категории"
+      text2: "Badge за прохождение теста впервого раза"
+      text3: "Badge за все тесты выбранного уровня"
 
   layouts:
     footer:

@@ -6,10 +6,9 @@ ru:
         delete: "Удалить"
         sure: "Вы уверены?"
       edit:
-        rule: ""
-        success_category: "Badge for success passing all tests the category"
-        success_on_first_try: "Badge for success passing test from first try"
-        success_all_level: "Badge for success passing tests for the level"
+        text1: "Badge for success passing all tests the category"
+        text2: "Badge for success passing test from first try"
+        Text3: "Badge for success passing tests for the level"
         edit_achiv: "Редактировать badge"
       index:
         achievements: "Призы"

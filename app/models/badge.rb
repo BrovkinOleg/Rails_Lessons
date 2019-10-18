@@ -8,6 +8,14 @@ class Badge < ApplicationRecord
   has_many :users, through: :users_badges
   validates :title, :image, presence: true
 
+  def get_title(param)
+    case param
+    when 'success_category' then '.text1'
+    when 'success_on_first_try' then '.text2'
+    when 'success_all_level' then '.text3'
+    end
+  end
+
   def self.images
     images_path = 'app/assets/images/'
     badges = Dir.glob("#{images_path}badges/*")

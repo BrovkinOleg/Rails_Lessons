@@ -15,12 +15,10 @@ en:
     index:
       achievements: "Your badges"
       all_badges: "All badges"
-
-  views:
-    badges:
-      index:
-        achievements: "Your badges"
-        all_badges: "All badges"
+    badge:
+      text1: "Badge for success passing all tests the category"
+      text2: "Badge for success passing test from first try"
+      text3: "Badge for success passing tests for the level"
 
   layouts:
     footer:

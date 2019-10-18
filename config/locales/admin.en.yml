@@ -6,10 +6,6 @@ en:
         delete: "Delete"
         sure: "Are you sure?"
       edit:
-        rule: "Badge for all tests"
-        success_category: "Badge for success passing all tests the category"
-        success_on_first_try: "Badge for success passing test from first try"
-        success_all_level: "Badge for success passing tests for the level"
         edit_achiv: "Edit badge"
       index:
         achievements: "Achievements"
