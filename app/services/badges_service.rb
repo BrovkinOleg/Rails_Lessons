@@ -7,37 +7,32 @@ class BadgesService
   end
 
   def call
+    @success_tests = success_tests
+    badges = []
     Badge.all.find_each do |badge|
-      return get_badge(badge.rule) if send("passed_#{badge.title}?", badge.rule)
+      badges << badge if send("passed_#{badge.rule}?", badge.rule_param)
     end
+    badges
   end
 
   private
 
-  def get_badge(rule)
-    Badge.find_by(rule: rule)
-  end
+  def passed_success_category?(param)
+    return if @test.category.title != param
 
-  def passed_success_category?(title)
-    return false if Category.find_by(title: title).nil?
-
-    category_tests = Test.where(title: title).count
-    ids = @user.tests.where(title: title).ids
-    user_tests = success_tests.where(test_id: ids).count
-    user_tests >= category_tests
+    ids = Test.joins(:category).where(categories: { title: param }).ids
+    @success_tests.where(test_id: ids).uniq.count >= ids.count
   end
 
   def passed_success_on_first_try?(_no_param)
-    TestPassage.where(user: @user, test: @test).count == 1 && @test_passage.success?
+    @success_tests.where(test: @test).count == 1
   end
 
-  def passed_success_all_level?(level)
-    level_tests = Test.where(level: level).count
-    return false if level_tests == 0
+  def passed_success_all_level?(param)
+    return if @test.level.to_s != param
 
-    ids = @user.tests.where(level: level).ids
-    user_tests = success_tests.where(test_id: ids).count
-    user_tests >= level_tests
+    ids = Test.where(level: param).ids
+    @success_tests.where(test_id: ids).uniq.count >= ids.count
   end
 
   def success_tests

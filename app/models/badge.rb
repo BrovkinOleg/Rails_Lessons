@@ -1,6 +1,8 @@
 class Badge < ApplicationRecord
 
-  RULES_NAME = %w[success_category success_on_first_try success_all_level].freeze
+  RULES_NAME = %w[success_category
+                  success_on_first_try
+                  success_all_level].freeze
 
   has_many :users_badges
   has_many :users, through: :users_badges
