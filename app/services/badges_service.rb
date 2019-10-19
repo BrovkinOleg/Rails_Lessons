@@ -36,6 +36,7 @@ class BadgesService
   end
 
   def success_tests
+    @test_passage.success?
     @user.test_passages.where(success: true)
   end
 end
