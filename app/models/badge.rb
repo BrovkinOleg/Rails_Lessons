@@ -10,9 +10,9 @@ class Badge < ApplicationRecord
 
   def get_title(param)
     case param
-    when 'success_category' then '.text1'
-    when 'success_on_first_try' then '.text2'
-    when 'success_all_level' then '.text3'
+    when RULES_NAME[0] then '.text1'
+    when RULES_NAME[1] then '.text2'
+    when RULES_NAME[2] then '.text3'
     end
   end
 
