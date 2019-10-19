@@ -1,6 +1,11 @@
 en:
   admin:
     badges:
+      form:
+        success_category: "Badge for success passing all tests the category"
+        success_on_first_try: "Badge for success passing test from first try"
+        success_all_level: "Badge for success passing tests for the level"
+
       badge:
         edit: "Edit"
         delete: "Delete"

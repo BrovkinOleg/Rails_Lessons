@@ -1,6 +1,11 @@
 ru:
   admin:
     badges:
+      form:
+        success_category: "Badge за все тесты выбранной категории"
+        success_on_first_try: "Badge за прохождение теста c первого раза"
+        success_all_level: "Badge за все тесты выбранного уровня"
+
       badge:
         edit: "Изменить"
         delete: "Удалить"
