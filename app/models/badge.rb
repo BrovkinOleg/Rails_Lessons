@@ -6,15 +6,7 @@ class Badge < ApplicationRecord
 
   has_many :users_badges
   has_many :users, through: :users_badges
-  validates :title, :image, presence: true
-
-  def get_title(param)
-    case param
-    when RULES_NAME[0] then '.text1'
-    when RULES_NAME[1] then '.text2'
-    when RULES_NAME[2] then '.text3'
-    end
-  end
+  validates :title, :image, :rule, presence: true
 
   def self.images
     images_path = 'app/assets/images/'

@@ -16,9 +16,9 @@ ru:
       achievements: "Ваши badges"
       all_badges: "Все badges"
     badge:
-      text1: "Badge за все тесты выбранной категории"
-      text2: "Badge за прохождение теста c первого раза"
-      text3: "Badge за все тесты выбранного уровня"
+      success_category: "Badge за все тесты выбранной категории"
+      success_on_first_try: "Badge за прохождение теста c первого раза"
+      success_all_level: "Badge за все тесты выбранного уровня"
 
   layouts:
     footer:
