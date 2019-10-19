@@ -7,8 +7,9 @@
     </p>
     <p>
       <%= form.label :rule %>
-      <% rules_array = Badge::RULES_NAME.map { |rule| t(".#{rule}") } %>
-      <%= form.select(:rule, options_for_select(rules_array, selected: @badge.rule)) %>
+      <%# rules_array = Badge::RULES_NAME.map { |rule| t(".#{rule}") } %>
+      <%#= form.select(:rule, options_for_select(rules_array, selected: @badge.rule)) %>
+      <%= form.select(:rule, options_for_select(Badge::RULES_NAME, selected: @badge.rule)) %>
     </p>
     <p>
       <%= form.label :rule_param %>

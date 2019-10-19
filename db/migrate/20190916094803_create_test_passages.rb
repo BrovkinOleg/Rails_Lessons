@@ -5,7 +5,7 @@ class CreateTestPassages < ActiveRecord::Migration[6.0]
       t.references :test, foreign_key: true
       t.references :current_question, foreign_key: { to_table: :questions }
       t.integer :correct_questions, default: 0
-      t.boolean :success, default: false
+      t.boolean :badge_checked, default: false
 
       t.timestamps
     end

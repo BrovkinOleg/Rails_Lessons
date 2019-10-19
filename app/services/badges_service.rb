@@ -16,7 +16,8 @@ class BadgesService
     return if @test.category.title != param
 
     ids = Test.joins(:category).where(categories: { title: param }).ids
-    @test_passage.success? && @user.test_passages.where(test_id: ids).uniq.count >= ids.count
+    used_test_passages = @user.test_passages.where(test_id: ids, success: false).uniq
+    @test_passage.success? && used_test_passages.count >= ids.count
   end
 
   def passed_success_on_first_try?(_no_param)

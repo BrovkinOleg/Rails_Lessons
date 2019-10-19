@@ -13,8 +13,6 @@ class TestPassagesController < ApplicationController
     if @test_passage.completed?
       badges = BadgesService.new(@test_passage).call
       current_user.badges << badges unless badges.nil?
-      badges&.delete_all
-
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     else
