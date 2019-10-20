@@ -22,10 +22,6 @@ class BadgesService
     mark_set(used, mark) if @test_passage.success? && used.count >= ids.count
   end
 
-  def passed_success_on_first_try?(_no_param)
-    @test_passage.success? && @user.test_passages.where(test: @test).count == 1
-  end
-
   def passed_success_all_level?(param)
     return if @test.level.to_s != param
 
@@ -36,8 +32,17 @@ class BadgesService
     mark_set(used, mark) if @test_passage.success? && used.uniq.count >= ids.count
   end
 
+  def passed_success_on_first_try?(_no_param)
+    mark = 0x04
+    used_passage = @user.test_passages.where(test: @test)
+    mark_set(used_passage, mark) if @test_passage.success? && used_passage.count == 1
+  end
+
   def mark_set(array, mark)
-    array.each { |pass| pass.badge_used |= mark }
+    array.each do |pass|
+      pass.badge_used |= mark
+      pass.save
+    end
     true
   end
 end
