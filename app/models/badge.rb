@@ -6,7 +6,8 @@ class Badge < ApplicationRecord
 
   has_many :users_badges
   has_many :users, through: :users_badges
-  validates :title, :image, :rule, presence: true
+  validates :title, :image, presence: true
+  validates :rule, inclusion: { in: RULES_NAME, message: 'wrong rule, look in  RULES_NAME' }
 
   def self.images
     images_path = 'app/assets/images/'
