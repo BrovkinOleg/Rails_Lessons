@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2019_10_11_090213) do
     t.bigint "test_id"
     t.bigint "current_question_id"
     t.integer "correct_questions", default: 0
-    t.boolean "badge_checked", default: false
+    t.integer "badge_used", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["current_question_id"], name: "index_test_passages_on_current_question_id"
