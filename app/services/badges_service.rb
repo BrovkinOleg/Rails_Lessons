@@ -17,7 +17,7 @@ class BadgesService
 
     ids = Test.joins(:category).where(categories: { title: param }).ids
     passages = @user.test_passages.where(test_id: ids).uniq
-    badge = UsersBadge.joins(:badge).where(badges: { rule_param: param }).last
+    badge = UsersBadge.joins(:badge).where(user_id: @user.id, badges: { rule_param: param }).last
     unless badge.nil?
       create_date = badge.created_at
       passages = passages.select { |pass| pass.created_at > create_date }
@@ -30,7 +30,7 @@ class BadgesService
 
     ids = Test.where(level: param).ids
     passages = @user.test_passages.where(test_id: ids).uniq
-    badge = UsersBadge.joins(:badge).where(badges: { rule_param: param }).last
+    badge = UsersBadge.joins(:badge).where(user_id: @user.id, badges: { rule_param: param }).last
     unless badge.nil?
       create_date = badge.created_at
       passages = passages.select { |pass| pass.created_at > create_date }
