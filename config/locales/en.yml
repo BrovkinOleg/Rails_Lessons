@@ -11,6 +11,10 @@ en:
   sign_up: "sign up"
   sign_in: "login"
 
+  models:
+    badge:
+      wrong_rule: "wrong rule, look in  RULES_NAME[]"
+
   badges:
     index:
       achievements: "Your badges"

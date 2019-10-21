@@ -13,7 +13,8 @@ class BadgesService
   private
 
   def passed_success_category?(param)
-    return if @test_passage.success? == false || @test.category.title != param
+    return unless @test_passage.success?
+    return unless @test.category.title == param
 
     ids = Test.joins(:category).where(categories: { title: param }).ids
     passages = @user.test_passages.where(test_id: ids).uniq
@@ -26,7 +27,8 @@ class BadgesService
   end
 
   def passed_success_all_level?(param)
-    return if @test_passage.success? == false || @test.level.to_s != param
+    return unless @test_passage.success?
+    return unless @test.level.to_s == param
 
     ids = Test.where(level: param).ids
     passages = @user.test_passages.where(test_id: ids).uniq

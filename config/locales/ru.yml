@@ -11,6 +11,10 @@ ru:
   sign_up: "Зарегистрироваться"
   sign_in: "Войти"
 
+  models:
+    badge:
+      wrong_rule: "название rule не совпадает с RULES_NAME[]"
+
   badges:
     index:
       achievements: "Ваши badges"
