@@ -2,7 +2,7 @@
 document.addEventListener('turbolinks:load', function() {
   let timerSeconds = document.querySelector('.timer');
   if (timerSeconds) {
-    let time  = timerSeconds.dataset.time_left;
+    let time = timerSeconds.dataset.time_left;
 
     let timerId = setInterval(function () { timer_work() }, 1000);
 

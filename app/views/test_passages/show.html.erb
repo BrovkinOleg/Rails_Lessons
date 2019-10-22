@@ -3,7 +3,7 @@
 
     <div>
       Time_left: <%= content_tag :span, '', class: 'timer',
-                                 data: { time_left: @test_passage.timer_left_seconds } %>
+                                 data: { time_left: @test_passage.timer_seconds } %>
     </div>
 
     <%= content_tag :progress, id: 'progressbar', class: 'progress-bar', max: 100,

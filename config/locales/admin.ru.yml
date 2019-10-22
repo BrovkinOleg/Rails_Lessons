@@ -32,6 +32,7 @@ ru:
       create:
         success: "Тест успешно создан"
       index:
+        timer: "Время"
         header: "Доступные тесты"
         title: "Название"
         level: "Уровень"

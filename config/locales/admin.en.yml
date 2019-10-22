@@ -29,6 +29,7 @@ en:
       create:
         success: "Test was successfully created"
       index:
+        timer: "Time Left"
         header: "Tricky tests"
         title: "Title"
         level: "Level"

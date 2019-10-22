@@ -36,8 +36,9 @@ class TestPassage < ApplicationRecord
     save!
   end
 
-  def timer_left_seconds
-    (created_at + test.timer.minutes - Time.current).to_i
+  def timer_seconds
+    time = created_at + test.timer.minutes - Time.current
+    t = time.to_i
   end
 
   private

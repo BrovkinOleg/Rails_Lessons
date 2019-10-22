@@ -15,8 +15,9 @@
     </th>
     <th><%= t('.level') %></th>
     <th><%= t('.questions') %></th>
+    <th><%= t('.timer') %></th>
     <th colspan="3"><%= t('.action') %></th>
   </tr>
 
-  <%= render @tests %>
+  <%= render @tests.sort %>
 </table>
