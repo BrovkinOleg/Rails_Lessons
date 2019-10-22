@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_191_011_090_213) do
+ActiveRecord::Schema.define(version: 20_191_022_090_712) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20_191_011_090_213) do
     t.datetime 'updated_at', precision: 6, null: false
     t.integer 'category_id'
     t.integer 'admin_id'
+    t.integer 'timer', default: 900
     t.index ['admin_id'], name: 'index_tests_on_admin_id'
     t.index ['category_id'], name: 'index_tests_on_category_id'
     t.index %w[title level], name: 'index_tests_on_title_and_level', unique: true
