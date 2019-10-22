@@ -43,7 +43,7 @@ class TestPassage < ApplicationRecord
   private
 
   def expires_at
-    created_at + test.timeleft.minutes
+    created_at + test.timer.minutes
   end
 
   def time_is_over?
