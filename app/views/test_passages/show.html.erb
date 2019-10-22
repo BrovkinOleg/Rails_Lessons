@@ -2,8 +2,8 @@
   <div class="col col-md-4">
 
     <div>
-      Time_left: <%= content_tag :span, 'qqq', class: 'my_timer',
-                                 data: { time_left: @test_passage.timer_seconds } %>
+      Time_left: <%= content_tag :span, '00:00', class: 'my_timer',
+                     data: { timeleft: @test_passage.timer_seconds } %>
     </div>
 
     <%= content_tag :progress, id: 'progressbar', class: 'progress-bar', max: 100,
