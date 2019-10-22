@@ -2,12 +2,13 @@
   <div class="col col-md-4">
 
     <div>
-      Time_left: <%= content_tag :span, '', class: 'timer', data: {timeleft: @test_passage.timer_seconds} %>
+      Time_left: <%= content_tag :span, '', class: 'timer',
+                                 data: { time_left: @test_passage.timer_left_seconds } %>
     </div>
 
     <%= content_tag :progress, id: 'progressbar', class: 'progress-bar', max: 100,
                     data: { question_number: @test_passage.current_question_number,
-                    count_of_questions: @test_passage.questions_number } do; end%>
+                            count_of_questions: @test_passage.questions_number } do; end%>
 
     <h2 class="text-info">Passing the "<%= @test_passage.test.title %>" Test</h2>
     <h4> Choose answer for question "<%= @test_passage.current_question.body %>"</h4>
@@ -24,5 +25,6 @@
       <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
       <p><%= form.submit 'Next', class: 'btn btn-primary ' %></p>
     <% end %>
+    <p><%= link_to ' ', result_test_passage_path(@test_passage), id: 'time_over' %></p>
   </div>
 </div>

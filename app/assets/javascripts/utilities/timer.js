@@ -2,17 +2,19 @@
 document.addEventListener('turbolinks:load', function() {
   let timerSeconds = document.querySelector('.timer');
   if (timerSeconds) {
-    let time = timerSeconds.dataset.timeleft;
+    let time  = timerSeconds.dataset.time_left;
 
-    setInterval(function () {
+    let timerId = setInterval(function () { timer_work() }, 1000);
+
+    function timer_work() {
       if (time > 0) {
         time -= 1;
       } else {
-        alert('Время вышло');
-        document.querySelector('form').submit();
+        clearInterval(timerId);
+        document.getElementById("time_over").click();
       }
-      let result = parseInt(time / 60) + ':' + time % 60;
-      timerSeconds.innerHTML = result;
-    }, 1000)
-  };
+      let minutes = (time / 60).toString(10);
+      timerSeconds.innerHTML = parseInt(minutes) + ':' + time % 60;
+    }
+  }
 });
