@@ -2,7 +2,7 @@
   <div class="col col-md-4">
 
     <div>
-      Time_left: <%= content_tag :span, '00:00', class: 'my_timer',
+      Time_left: <%= content_tag :span, '', class: 'my_timer',
                      data: { timeleft: @test_passage.timer_seconds } %>
     </div>
 
@@ -25,6 +25,5 @@
       <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post %></p>
       <p><%= form.submit 'Next', class: 'btn btn-primary ' %></p>
     <% end %>
-    <p><%= link_to ' ', result_test_passage_path(@test_passage), id: 'time_over' %></p>
   </div>
 </div>

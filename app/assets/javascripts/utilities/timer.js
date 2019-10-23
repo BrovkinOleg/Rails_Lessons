@@ -11,7 +11,7 @@ document.addEventListener('turbolinks:load', function() {
         time -= 1;
       } else {
         clearInterval(timerId);
-        document.getElementById("time_over").click();
+        document.querySelector('form').submit();
       }
       let minutes = (time / 60).toString(10);
       timerSeconds.innerHTML = parseInt(minutes) + ':' + time % 60;
