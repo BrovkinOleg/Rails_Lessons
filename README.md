@@ -1,31 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Данный проект был разработан под руководством куратора на курсах thinknetica.com
+по программе Ruby on Rails. Продвинутый уровень (10 недель учебы).
+Использовался IDE Rubymine под Linux.
 
-Things you may want to cover:
-
-* Ruby version 2.5.5
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-Для построения приложения TestGuru потребуются следующие сущности:  
-* Пользователи
-* Вопросы
-* Ответы
-* Тесты
-* Обработка
-* Результаты
-
+В процессе выполнения данной работы были изучены и применялись следующие навыки:
+    Agile-процесс разработки, Git flow, Основы TDD/BDD с RSpec
+    Тестирование контроллеров, Интеграционное (acceptance) тестирование
+    HAML/Slim, SCSS, CoffeeScript, Ajax
+    Вложенные формы, Полиморфные ассоциации, JSON и различные формы ajax
+    ActionCable, "Тонкие" контроллеры и responders
+    OAuth и аутентификация через соц. сети, Авторизация
+    Разработка REST API, "Продвинутый" RSpec
+    Фоновые задачи, Запуск задач по расписанию
+    Полнотекстовый поиск
+    Настройка сервера "с нуля"
+    Deploy приложения через Capistrano
+    Passenger и Unicorn
+    "Продвинутая" настройка сервера
+    Кэширование и оптимизация
+    Highload и High availability
+    "Философия" Rails
+    Проектирование архитектуры
+    Рефакторинг
+    Различные gem'ы
+    
